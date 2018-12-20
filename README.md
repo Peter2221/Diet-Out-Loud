@@ -1,3 +1,6 @@
+#project II - TM - "Diet out loud"
+all files are ready to download
+
 # tm-clients
 
 Project includes Python clients to services provided by [Techmo](http://techmo.pl/) exclusively for TM labs. 
