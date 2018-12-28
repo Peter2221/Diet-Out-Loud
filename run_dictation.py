@@ -6,7 +6,6 @@ from dictation.service.streaming_recognizer import StreamingRecognizer
 from address_provider import AddressProvider
 from os.path import join as opjoin
 
-
 class DictationArgs:
     address = None                      # IP address and port (address:port) of a service the client will connect to.
     interim_results = False             # If set - messages with temporal results will be shown.
