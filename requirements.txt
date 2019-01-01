@@ -14,3 +14,7 @@ google-cloud-speech
 googleapis-common-protos==1.5.3
 httplib2
 oauth2client
+
+#nie wiem czy to tak ³adnie 
+from openpyxl import load_workbook
+from xlsxwriter.utility import xl_rowcol_to_cell
