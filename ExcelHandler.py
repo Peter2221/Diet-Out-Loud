@@ -2,7 +2,6 @@ from openpyxl import load_workbook
 from xlsxwriter.utility import xl_rowcol_to_cell
 
 class ExcelHandler():
-
     kalorie = []
     produkty = []
 
