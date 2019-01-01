@@ -8,7 +8,7 @@ morf = morfeusz2.Morfeusz()
 #     for interpretation in analysis:
 #         print(interpretation)
 
-word = "jednego"
+word = "Ola Lorenc i Marcin Konieczny są spoko"
 print(word)
 analysis = morf.analyse(word)
 
