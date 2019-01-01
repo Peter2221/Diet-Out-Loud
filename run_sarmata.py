@@ -35,8 +35,8 @@ class SarmataArgs:
 
 
 if __name__ == '__main__':
-    wave_file = "waves/example_koncert.wav"
-    grammar_file = "grammars/koncert.abnf"
+    wave_file = "waves/example_cyfry.wav"
+    grammar_file = "grammars/cyfry.abnf"
     args = SarmataArgs(wave_file, grammar_file)
 
     settings = SarmataSettings()
