@@ -3,6 +3,7 @@ from run_trybun import *
 import pyaudio
 import wave
 import time
+from morfeusz2_usage import Morfeusz2_usage
 
 def record_voice():
     # podstawowe parametry
@@ -53,7 +54,7 @@ def record_voice():
 def main():
     # record voice
     # nagrywa 3 sekundy z mikrofonu w kompie
-    record_voice()
+    #record_voice()
 
     # run_dictation
     # pisze w konsoli co wykryło
@@ -69,6 +70,16 @@ def main():
             print('Recognizing...')
             results = recognizer.recognize(stream)
             print_results(results)
+
+    word = results[0]
+    # print słowo ponade przez mówcę
+    word = word['transcript']
+    # tworzę obiekt klasy morfeusza, ma funkcję która zwraca słowo w mianowniku
+    morf = Morfeusz2_usage()
+    infinitive_word = morf.infinitive_of_word(word)
+
+    # słowo w mianowniku
+    print(infinitive_word)
 
     # run_trybun
     # output_wave_file = 'tts_output.wav'

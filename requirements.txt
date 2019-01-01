@@ -14,7 +14,12 @@ google-cloud-speech
 googleapis-common-protos==1.5.3
 httplib2
 oauth2client
+<<<<<<< HEAD
 
 #nie wiem czy to tak ³adnie 
 from openpyxl import load_workbook
 from xlsxwriter.utility import xl_rowcol_to_cell
+=======
+openpyxl
+xlsxwriter
+>>>>>>> 6c36d2cae228c62d65c7bbfadd823cf065246482
