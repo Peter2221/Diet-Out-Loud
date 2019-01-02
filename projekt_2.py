@@ -1,65 +1,20 @@
 from run_dictation import *
 from run_trybun import *
-import pyaudio
-import wave
-import time
 from morfeusz2_usage import Morfeusz2_usage
+from ExcelHandler import ExcelHandler
+from VoiceRecording import VoiceRecording
 
-def record_voice():
-    # podstawowe parametry
-    CHUNK = 1024
-    FORMAT = pyaudio.paInt16
-    CHANNELS = 1
-    RECORD_SECONDS = 5
-    RATE = 44100
-    WAVE_OUTPUT_FILENAME = "waves\output.wav"
-
-    # tworzy obiekt pyadio
-    p = pyaudio.PyAudio()
-
-    # tworzy stream z parametrami
-    stream = p.open(format=FORMAT, channels = CHANNELS, rate = RATE, input=True, frames_per_buffer=CHUNK)
-
-    # odlicza do nagrywania
-    print("nagrywanie za 3")
-    time.sleep(1)
-    print("2")
-    time.sleep(1)
-    print("1")
-    time.sleep(1)
-    print("*** nagrywanie... ***")
-
-    frames = []
-
-    # zczytuje próbki z mikrofonu i dodaje do wektora, 44100/1024 * 3
-    for i in range(0, int(RATE / CHUNK * RECORD_SECONDS)):
-        data = stream.read(CHUNK)
-        frames.append(data)
-
-    print("*** koniec nagrywania ***")
-
-    # zatrzymuje stream
-    stream.stop_stream()
-    stream.close()
-    p.terminate()
-
-    # zapisuje do pliku
-    wf = wave.open(WAVE_OUTPUT_FILENAME, 'wb')
-    wf.setnchannels(CHANNELS)
-    wf.setsampwidth(p.get_sample_size(FORMAT))
-    wf.setframerate(RATE)
-    wf.writeframes(b''.join(frames))
-    wf.close()
 
 def main():
-    # record voice
-    # nagrywa 3 sekundy z mikrofonu w kompie
-    #record_voice()
+    # obiekt klasy VoiceRecording
+    # nagrywa 5 sekund z mikrofonu w kompie
+    # vr = VoiceRecording()
+    # vr.record_voice()
 
     # run_dictation
     # pisze w konsoli co wykryło
     # nie trzeba zamieniać żadnych śniezek do pliku
-    args = DictationArgs("waves/output.wav")
+    args = DictationArgs("waves/output3.wav")
     args.mic = True
 
     if args.wave is not None or args.mic:
@@ -69,6 +24,7 @@ def main():
 
             print('Recognizing...')
             results = recognizer.recognize(stream)
+            # printuje to co wykrył
             print_results(results)
 
     word = results[0]
@@ -76,19 +32,17 @@ def main():
     word = word['transcript']
     # tworzę obiekt klasy morfeusza, ma funkcję która zwraca słowo w mianowniku
     morf = Morfeusz2_usage()
-    infinitive_word = morf.infinitive_of_word(word)
+    product_inifinitive = morf.infinitive_of_word(word)
 
     # słowo w mianowniku
-    print(infinitive_word)
+    print(product_inifinitive)
 
-    # run_trybun
-    # output_wave_file = 'tts_output.wav'
-    # ap = AddressProvider()
-    # address = ap.get("tribune")
-    # sampling_rate = 44100
-    # input_text = "Siema, z tej strony Pioter"
-    #
-    # call_synthesize(address, input_text, output_wave_file, sampling_rate)
+    # ExcelHandler
+    exl = ExcelHandler()
+    wb = exl.open_workbook("products.xlsx")
+    exl.assign_sheets(wb)
+    # wypisuje co zjadłem + kalorie
+    exl.what_you_ate(product_inifinitive)
 
 if __name__ == "__main__":
     main()

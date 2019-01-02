@@ -2,11 +2,6 @@ from openpyxl import load_workbook
 from xlsxwriter.utility import xl_rowcol_to_cell
 
 class ExcelHandler():
-<<<<<<< HEAD
-
-=======
-    kalorie = []
->>>>>>> 6c36d2cae228c62d65c7bbfadd823cf065246482
     produkty = []
     kalorie = []
 
@@ -19,10 +14,11 @@ class ExcelHandler():
         self.produkty = wb["produkty"]  # wybieramy arkusz
         self.kalorie = wb["kalorie"]
 
-    def find_product(self):
+    def find_product(self, product):
 
         while True:
-            searched_product = input("podaj produkt: ") #to zastapimy mowa + morfeusz
+            #searched_product = input("podaj produkt: ") #to zastapimy mowa + morfeusz
+            searched_product = product
 
             for row in range(1, self.produkty.max_row + 1):
                 for col in range(1, self.produkty.max_column + 1):
@@ -36,17 +32,13 @@ class ExcelHandler():
         kcal = self.kalorie[found_cell]
         return kcal
 
-    def what_you_ate(self):
-        found_cell = self.find_product()
+    def what_you_ate(self, product):
+        found_cell = self.find_product(product)
         product = self.produkty[found_cell]
         kcal = self.get_calories(found_cell)
         print("zjadłeś produkt: " + str(product.value) + " co daje: " + str(kcal.value) + "kcal")
 
 
-exl = ExcelHandler()
-wb = exl.open_workbook("products.xlsx")
-exl.assign_sheets(wb)
-exl.what_you_ate()
 
 
 

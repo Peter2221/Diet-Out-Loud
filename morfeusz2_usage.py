@@ -33,5 +33,5 @@ class Morfeusz2_usage:
 
 if __name__ == "__main__":
     morf = Morfeusz2_usage()
-    word = morf.infinitive_of_word("herbatniki")
+    word = morf.infinitive_of_word("gramów")
     print(word)
