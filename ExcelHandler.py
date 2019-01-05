@@ -27,6 +27,9 @@ class ExcelHandler():
                         found_cell = xl_rowcol_to_cell(row - 1, col - 1)
                         return found_cell
                         break
+                    else:
+                        raise NoProductException("Nie ma takiego produktu w bazie!")
+
 
     def get_calories(self, found_cell):
         kcal = self.kalorie[found_cell]
@@ -37,6 +40,10 @@ class ExcelHandler():
         product = self.produkty[found_cell]
         kcal = self.get_calories(found_cell)
         print("zjadłeś produkt: " + str(product.value) + " co daje: " + str(kcal.value) + "kcal")
+
+
+class NoProductException(Exception):
+    pass
 
 
 

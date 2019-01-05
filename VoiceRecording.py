@@ -11,7 +11,7 @@ class VoiceRecording:
         CHANNELS = 1
         RECORD_SECONDS = 5
         RATE = 44100
-        WAVE_OUTPUT_FILENAME = "waves\output3.wav"
+        WAVE_OUTPUT_FILENAME = "waves\output5.wav"
 
         # tworzy obiekt pyadio
         p = pyaudio.PyAudio()
