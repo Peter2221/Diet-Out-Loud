@@ -17,6 +17,7 @@ class Trybun:
         input_text = text
 
         call_synthesize(address, input_text, output_wave_file, sampling_rate)
+        self.playWave()
 
     def playWave(self):
         # define stream chunk

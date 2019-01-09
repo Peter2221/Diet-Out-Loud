@@ -5,6 +5,7 @@ from dictation.service.dictation_settings import DictationSettings
 from dictation.service.streaming_recognizer import StreamingRecognizer
 from address_provider import AddressProvider
 from os.path import join as opjoin
+from VoiceRecording import VoiceRecording
 
 class DictationArgs:
     address = None                      # IP address and port (address:port) of a service the client will connect to.
@@ -26,6 +27,27 @@ class DictationArgs:
             self.wave = opjoin(wav_filepath)
         self.address = ap.get("dictation")
 
+class Dictation:
+    def dictation_recognize(self):
+        vr = VoiceRecording()
+        vr.record_voice()
+        args = DictationArgs("waves/output6.wav")
+        args.mic = True
+
+        if args.wave is not None or args.mic:
+            with create_audio_stream(args) as stream:
+                settings = DictationSettings(args)
+                recognizer = StreamingRecognizer(args.address, settings)
+
+                print('Recognizing...')
+                results = recognizer.recognize(stream)
+                # printuje to co wykrył
+                print_results(results)
+
+        words = results[0]
+        # print słowo ponade przez mówcę
+        words = words['transcript']
+        return words
 
 if __name__ == '__main__':
 

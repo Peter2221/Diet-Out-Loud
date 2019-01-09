@@ -9,7 +9,7 @@ class VoiceRecording:
         CHUNK = 1024
         FORMAT = pyaudio.paInt16
         CHANNELS = 1
-        RECORD_SECONDS = 6
+        RECORD_SECONDS = 4
         RATE = 44100
         WAVE_OUTPUT_FILENAME = "waves\output6.wav"
 
