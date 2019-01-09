@@ -1,0 +1,18 @@
+#ABNF 1.0;
+language pl-pl;
+mode voice;
+root $root;
+tag-format <semantics/1.0-literals>;
+
+$root = [$zyczenie] [$czasownik] $rzeczownik1 {1} | [$zyczenie] [$czasownik] $rzeczownik2 {2} | [$zaimek] [$zyczenie] [$czasownik] $rzeczownik3 {3};
+
+$zyczenie = chciałbym | chciałabym | chcę;
+$czasownik = policzyć | obliczyć | liczenie;
+
+$rzeczownik1 = kalorii | kalorie;
+
+$rzeczownik2 = bmi | beemi | bijemaj;
+
+$rzeczownik3 = [dzienne] zapotrzebowanie [kaloryczne];
+
+$zaimek = moje | twoje;

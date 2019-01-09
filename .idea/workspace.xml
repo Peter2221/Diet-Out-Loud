@@ -2,11 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b31e432-6687-4c76-acdb-fc2d10af3110" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/UserData.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ExcelHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/ExcelHandler.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/VoiceRecording.py" beforeDir="false" afterPath="$PROJECT_DIR$/VoiceRecording.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grammars/menu.abnf" beforeDir="false" afterPath="$PROJECT_DIR$/grammars/menu.abnf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/products.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/products.xlsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projekt_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/projekt_2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/waves/output3.wav" beforeDir="false" afterPath="$PROJECT_DIR$/waves/output3.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_sarmata.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_sarmata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run_trybun.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_trybun.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sarmata/sarmata_client.py" beforeDir="false" afterPath="$PROJECT_DIR$/sarmata/sarmata_client.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_menu.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tts_output.wav" beforeDir="false" afterPath="$PROJECT_DIR$/tts_output.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/venv/pip-selfcheck.json" beforeDir="false" afterPath="$PROJECT_DIR$/venv/pip-selfcheck.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/waves/output5.wav" beforeDir="false" afterPath="$PROJECT_DIR$/waves/output5.wav" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -18,44 +27,45 @@
     <session id="-1200435229">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="12" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="6" />
-          <entry key="project.open.time.6" value="4" />
+          <entry key="project.open.time.6" value="6" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="13" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="abnf" value="2" />
+          <entry key="abnf" value="7" />
+          <entry key="csv" value="2" />
           <entry key="gitignore" value="2" />
           <entry key="md" value="1" />
-          <entry key="py" value="17" />
+          <entry key="py" value="33" />
           <entry key="txt" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="PLAIN_TEXT" value="7" />
-          <entry key="Python" value="17" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Python" value="33" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="abnf" value="2" />
+          <entry key="abnf" value="399" />
           <entry key="dummy" value="15" />
           <entry key="gitignore" value="104" />
-          <entry key="py" value="3476" />
+          <entry key="py" value="6204" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="PLAIN_TEXT" value="123" />
-          <entry key="Python" value="3476" />
+          <entry key="PLAIN_TEXT" value="520" />
+          <entry key="Python" value="6204" />
         </counts>
       </usages-collector>
     </session>
@@ -63,13 +73,68 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_sarmata.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="276">
+              <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
+              <folding>
+                <element signature="e#47#147#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projekt_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+            <state relative-caret-position="1071">
+              <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
-                <marker date="1546702803592" expanded="true" signature="210:1807" ph="..." />
+                <marker date="1546954333524" expanded="true" signature="229:1941" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_menu.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="443">
+              <caret line="40" selection-start-line="40" selection-end-line="41" selection-end-column="10" />
+              <folding>
+                <element signature="e#0#24#0" expanded="true" />
+                <marker date="1547050841473" expanded="true" signature="399:1194" ph="..." />
+                <marker date="1547050841473" expanded="true" signature="1193:1194" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/UserData.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="221">
+              <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+              <folding>
+                <marker date="1547054101250" expanded="true" signature="103:108" ph="..." />
+                <marker date="1547054101250" expanded="true" signature="731:732" ph="..." />
+                <marker date="1547054101250" expanded="true" signature="762:1512" ph="..." />
+                <marker date="1547054101250" expanded="true" signature="1636:1793" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/run_trybun.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="153">
+              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+              <folding>
+                <element signature="e#39#90#0" expanded="true" />
+                <marker date="1546966847506" expanded="true" signature="178:179" ph="..." />
+                <marker date="1546966847506" expanded="true" signature="213:222" ph="..." />
               </folding>
             </state>
           </provider>
@@ -78,11 +143,23 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VoiceRecording.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+            <state>
+              <caret selection-end-line="2" selection-end-column="11" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
-                <marker date="1546701777336" expanded="true" signature="62:63" ph="..." />
+                <marker date="1546966692758" expanded="true" signature="62:63" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ExcelHandler.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="170">
+              <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+              <folding>
+                <element signature="e#0#34#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -96,19 +173,6 @@
               <folding>
                 <element signature="e#18#78#0" />
                 <marker date="1546383929460" expanded="true" signature="490:496" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ExcelHandler.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="30" column="82" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="82" />
-              <folding>
-                <element signature="e#0#34#0" expanded="true" />
-                <marker date="1546702505422" expanded="true" signature="1569:1594" ph="..." />
               </folding>
             </state>
           </provider>
@@ -130,22 +194,27 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/run_trybun.py" />
         <option value="$PROJECT_DIR$/run_dictation.py" />
         <option value="$PROJECT_DIR$/morfeusz2.py" />
-        <option value="$PROJECT_DIR$/run_sarmata.py" />
         <option value="$PROJECT_DIR$/grammars/cyfry.abnf" />
         <option value="$PROJECT_DIR$/test_morfeusza.py" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/morfeusz2_usage.py" />
-        <option value="$PROJECT_DIR$/VoiceRecording.py" />
         <option value="$PROJECT_DIR$/ExcelHandler.py" />
         <option value="$PROJECT_DIR$/projekt_2.py" />
+        <option value="$PROJECT_DIR$/grammars/menu.abnf" />
+        <option value="$PROJECT_DIR$/sarmata/sarmata_client.py" />
+        <option value="$PROJECT_DIR$/VoiceRecording.py" />
+        <option value="$PROJECT_DIR$/run_trybun.py" />
+        <option value="$PROJECT_DIR$/run_sarmata.py" />
+        <option value="$PROJECT_DIR$/test_menu.py" />
+        <option value="$PROJECT_DIR$/UserData.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="683" />
+    <option name="x" value="632" />
+    <option name="width" value="734" />
     <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -160,6 +229,11 @@
             <path>
               <item name="Projekt_II" type="b2602c69:ProjectViewProjectNode" />
               <item name="Projekt_II" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Projekt_II" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Projekt_II" type="462c0819:PsiDirectoryNode" />
+              <item name="grammars" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -183,7 +257,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.projekt_2">
+  <component name="RunManager" selected="Python.UserData">
     <configuration name="ExcelHandler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projekt_II" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -205,7 +279,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="morfeusz2_usage" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="UserData" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projekt_II" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -217,7 +291,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/morfeusz2_usage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/UserData.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -268,7 +342,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="test_morfeusza" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="test_menu" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projekt_II" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -280,7 +354,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="Q:\Dokumenty\Piter\III ROK\TechnologiaMowy\Projekt_II\morfeusz2_usage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_menu.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -292,17 +366,17 @@
     <list>
       <item itemvalue="Python.projekt_2" />
       <item itemvalue="Python.run_sarmata" />
-      <item itemvalue="Python.test_morfeusza" />
-      <item itemvalue="Python.morfeusz2_usage" />
       <item itemvalue="Python.ExcelHandler" />
+      <item itemvalue="Python.test_menu" />
+      <item itemvalue="Python.UserData" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.UserData" />
+        <item itemvalue="Python.test_menu" />
+        <item itemvalue="Python.run_sarmata" />
         <item itemvalue="Python.projekt_2" />
         <item itemvalue="Python.ExcelHandler" />
-        <item itemvalue="Python.morfeusz2_usage" />
-        <item itemvalue="Python.test_morfeusza" />
-        <item itemvalue="Python.run_sarmata" />
       </list>
     </recent_temporary>
   </component>
@@ -319,20 +393,29 @@
     </task>
     <servers />
   </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18973215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17113096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.31639344" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -342,16 +425,16 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18973215" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17113096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3590164" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2967213" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
@@ -366,6 +449,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/ExcelHandler.py</url>
+          <line>42</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/README.md">
@@ -401,16 +495,6 @@
     <entry file="file://$PROJECT_DIR$/EGG-INFO/native_libs.txt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/grammars/cyfry.abnf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grammars/koncert.abnf">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -428,27 +512,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/run_sarmata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="38" column="34" selection-start-line="38" selection-start-column="34" selection-end-line="38" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_trybun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" selection-start-line="6" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/address_provider.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/run_dictation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/xlsxwriter/utility.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-142">
+          <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sarmata/service/sarmata_recognize.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="76" column="8" selection-start-line="76" selection-start-column="8" selection-end-line="76" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/xmlrpc/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="836" column="8" selection-start-line="836" selection-start-column="8" selection-end-line="836" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/future/backports/xmlrpc/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="833" column="8" selection-start-line="833" selection-start-column="8" selection-end-line="833" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/trace.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-567">
+          <caret line="604" column="8" selection-start-line="604" selection-start-column="8" selection-end-line="604" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammars/koncert.abnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="28" selection-end-line="19" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammars/cyfry.abnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grammars/menu.abnf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="33" selection-start-line="11" selection-start-column="33" selection-end-line="11" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sarmata/sarmata_client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-374">
+          <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+          <folding>
+            <element signature="e#47#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -463,35 +596,98 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/VoiceRecording.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="45" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        <state>
+          <caret selection-end-line="2" selection-end-column="11" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
-            <marker date="1546701777336" expanded="true" signature="62:63" ph="..." />
+            <marker date="1546966692758" expanded="true" signature="62:63" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_trybun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+          <folding>
+            <element signature="e#39#90#0" expanded="true" />
+            <marker date="1546966847506" expanded="true" signature="178:179" ph="..." />
+            <marker date="1546966847506" expanded="true" signature="213:222" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/projekt_2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="57" column="17" selection-start-line="57" selection-start-column="17" selection-end-line="57" selection-end-column="17" />
+        <state relative-caret-position="1071">
+          <caret line="63" column="10" selection-start-line="63" selection-start-column="10" selection-end-line="63" selection-end-column="10" />
           <folding>
             <element signature="e#0#27#0" expanded="true" />
-            <marker date="1546702803592" expanded="true" signature="210:1807" ph="..." />
+            <marker date="1546954333524" expanded="true" signature="229:1941" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelHandler.py">
+    <entry file="file://$PROJECT_DIR$/run_sarmata.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="30" column="82" selection-start-line="30" selection-start-column="82" selection-end-line="30" selection-end-column="82" />
+        <state relative-caret-position="276">
+          <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
           <folding>
-            <element signature="e#0#34#0" expanded="true" />
-            <marker date="1546702505422" expanded="true" signature="1569:1594" ph="..." />
+            <element signature="e#47#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/address_provider.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_menu.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="40" selection-start-line="40" selection-end-line="41" selection-end-column="10" />
+          <folding>
+            <element signature="e#0#24#0" expanded="true" />
+            <marker date="1547050841473" expanded="true" signature="399:1194" ph="..." />
+            <marker date="1547050841473" expanded="true" signature="1193:1194" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/UserData.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="55" column="26" lean-forward="true" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
+          <folding>
+            <marker date="1547054101250" expanded="true" signature="103:108" ph="..." />
+            <marker date="1547054101250" expanded="true" signature="731:732" ph="..." />
+            <marker date="1547054101250" expanded="true" signature="762:1512" ph="..." />
+            <marker date="1547054101250" expanded="true" signature="1636:1793" ph="..." />
           </folding>
         </state>
       </provider>

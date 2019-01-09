@@ -9,9 +9,9 @@ class VoiceRecording:
         CHUNK = 1024
         FORMAT = pyaudio.paInt16
         CHANNELS = 1
-        RECORD_SECONDS = 5
+        RECORD_SECONDS = 6
         RATE = 44100
-        WAVE_OUTPUT_FILENAME = "waves\output5.wav"
+        WAVE_OUTPUT_FILENAME = "waves\output6.wav"
 
         # tworzy obiekt pyadio
         p = pyaudio.PyAudio()
@@ -49,3 +49,5 @@ class VoiceRecording:
         wf.setframerate(RATE)
         wf.writeframes(b''.join(frames))
         wf.close()
+
+

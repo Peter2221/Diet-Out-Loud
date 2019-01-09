@@ -37,7 +37,9 @@ def print_results(responses, stream):
         n = 1
         for res in response.results:
             transcript = " ".join([word.transcript for word in res.words])
-            print("[{}.] {} /{}/ ({})".format(n, transcript, res.semantic_interpretation, res.confidence))
+            #print("[{}.] {} /{}/ ({})".format(n, transcript, res.semantic_interpretation, res.confidence))
+            return res.semantic_interpretation
+            break
             n += 1
 
 

@@ -3,18 +3,19 @@ from run_trybun import *
 from morfeusz2_usage import Morfeusz2_usage
 from ExcelHandler import ExcelHandler, NoProductException
 from VoiceRecording import VoiceRecording
+import numpy as np
 
 
 def main():
     # obiekt klasy VoiceRecording
     # nagrywa 5 sekund z mikrofonu w kompie
-    #vr = VoiceRecording()
-    #vr.record_voice()
+    vr = VoiceRecording()
+    vr.record_voice()
 
     # run_dictation
     # pisze w konsoli co wykryło
     # nie trzeba zamieniać żadnych śniezek do pliku
-    args = DictationArgs("waves/output5.wav")
+    args = DictationArgs("waves/output6.wav")
     args.mic = True
 
     if args.wave is not None or args.mic:
@@ -32,12 +33,14 @@ def main():
     words = words['transcript']
     words = words.split()
     other_words = []
+    what_weight = 0
     # petla dla kazdego słowa
     for word in words:
+        # jakbysmy potrzebowali wagi
         if word.isdigit() == True:
-            what_weight = word
+            what_weight = int(word)
         else:
-            if word == "gram" or word == "gramów":
+            if word == "gram" or word == "gramów" or word == "gramy":
                 continue
             other_words.append(word)
 
@@ -52,8 +55,8 @@ def main():
         for word in other_words:
             product_inifinitive = morf.infinitive_of_word(word)
             print(product_inifinitive)
-            # wypisuje co zjadłem + kalorie
-            exl.what_you_ate(product_inifinitive)
+            # wypisuje co zjadłem + kalorie, podaje produkt + mase
+            exl.what_you_ate(product_inifinitive, what_weight)
     except NoProductException as exception:
         print(exception.args[0])
 

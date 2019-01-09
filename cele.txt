@@ -1,0 +1,24 @@
+def co_robimy_dalej():
+
+Proste wykrywanie
+- Jak to będzie przebiegało?
+Witaj ...
+--> liczenie kalorii (+info ile zostało kalorii, + podzial na dni - sprawdzenie daty)
+--> liczenie BMI
+--> wyświetlanie ile zostało (statystycznie)
+
+
+--- przykładowa konsola ---
+>> słowo klucz BMI (be em i, bi em aj)
+
+Witaj, chcesz policzyć kalorie, BMI, czy ile jeszcze możesz zjeść? >> zapyta jeszcze raz >> 
+
+Witaj, wybierz jedną z opcji. ( + dłuższy wstęp)
+1) liczenie kalorii (produkt + waga)
+2) liczenie BMI
+3) dzienne zapotrzebowanie
+
+
+1) chcę policzyć kalorie / liczenie kalorii / kalorie 
+2) chcę policzyć BMI / liczenie BMI / BMI 
+3) (twoje/moje) dzienne zapotrzebowanie / dzienne zapotrzebowanie / zapotrzebowanie
