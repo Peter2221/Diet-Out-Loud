@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3b31e432-6687-4c76-acdb-fc2d10af3110" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/UserData.py" beforeDir="false" afterPath="$PROJECT_DIR$/UserData.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/VoiceRecording.py" beforeDir="false" afterPath="$PROJECT_DIR$/VoiceRecording.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_dictation.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_dictation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/run_trybun.py" beforeDir="false" afterPath="$PROJECT_DIR$/run_trybun.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_menu.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_menu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tts_output.wav" beforeDir="false" afterPath="$PROJECT_DIR$/tts_output.wav" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/waves/output6.wav" beforeDir="false" afterPath="$PROJECT_DIR$/waves/output6.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user_data.csv" beforeDir="false" afterPath="$PROJECT_DIR$/user_data.csv" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,10 +19,10 @@
           <entry key="project.closed" value="15" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.5" value="6" />
-          <entry key="project.open.time.6" value="6" />
+          <entry key="project.open.time.6" value="7" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -52,14 +47,14 @@
           <entry key="abnf" value="399" />
           <entry key="dummy" value="15" />
           <entry key="gitignore" value="104" />
-          <entry key="py" value="6743" />
+          <entry key="py" value="6864" />
           <entry key="txt" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="520" />
-          <entry key="Python" value="6743" />
+          <entry key="Python" value="6864" />
         </counts>
       </usages-collector>
     </session>
@@ -69,7 +64,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_sarmata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1092">
+            <state relative-caret-position="1343">
               <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
               <folding>
                 <element signature="e#47#147#0" expanded="true" />
@@ -81,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/projekt_2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="159">
-              <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
+            <state relative-caret-position="102">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
               <folding>
                 <element signature="e#0#27#0" expanded="true" />
                 <marker date="1546954333524" expanded="true" signature="229:1941" ph="..." />
@@ -94,7 +89,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_dictation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-222">
+            <state relative-caret-position="459">
               <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
               <folding>
                 <element signature="e#38#111#0" expanded="true" />
@@ -107,12 +102,12 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_menu.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+            <state relative-caret-position="237">
+              <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
               <folding>
                 <element signature="e#0#24#0" expanded="true" />
-                <marker date="1547057103683" expanded="true" signature="2130:2134" ph="..." />
-                <marker date="1547057103683" expanded="true" signature="2133:2134" ph="..." />
+                <marker date="1547397247921" expanded="true" signature="2258:2262" ph="..." />
+                <marker date="1547397247921" expanded="true" signature="2261:2262" ph="..." />
               </folding>
             </state>
           </provider>
@@ -121,15 +116,15 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/UserData.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+            <state relative-caret-position="834">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
               <folding>
-                <marker date="1547057081439" expanded="true" signature="103:107" ph="..." />
-                <marker date="1547057081439" expanded="true" signature="155:160" ph="..." />
-                <marker date="1547057081439" expanded="true" signature="212:324" ph="..." />
-                <marker date="1547057081439" expanded="true" signature="695:696" ph="..." />
-                <marker date="1547057081439" expanded="true" signature="726:1476" ph="..." />
-                <marker date="1547057081439" expanded="true" signature="1600:1786" ph="..." />
+                <marker date="1547397154974" expanded="true" signature="103:107" ph="..." />
+                <marker date="1547397154974" expanded="true" signature="155:160" ph="..." />
+                <marker date="1547397154974" expanded="true" signature="220:361" ph="..." />
+                <marker date="1547397154974" expanded="true" signature="766:767" ph="..." />
+                <marker date="1547397154974" expanded="true" signature="797:1547" ph="..." />
+                <marker date="1547397154974" expanded="true" signature="1671:1865" ph="..." />
               </folding>
             </state>
           </provider>
@@ -138,7 +133,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/run_trybun.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
+            <state relative-caret-position="272">
               <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
               <folding>
                 <element signature="e#39#90#0" expanded="true" />
@@ -152,7 +147,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VoiceRecording.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
+            <state relative-caret-position="153">
               <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -165,7 +160,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ExcelHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
+            <state relative-caret-position="510">
               <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
               <folding>
                 <element signature="e#0#34#0" expanded="true" />
@@ -266,7 +261,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.test_menu">
+  <component name="RunManager" selected="Python.UserData">
     <configuration name="ExcelHandler" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Projekt_II" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -381,8 +376,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.test_menu" />
         <item itemvalue="Python.UserData" />
+        <item itemvalue="Python.test_menu" />
         <item itemvalue="Python.run_sarmata" />
         <item itemvalue="Python.projekt_2" />
         <item itemvalue="Python.ExcelHandler" />
@@ -413,6 +408,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17113096" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -420,7 +416,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3295082" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.2147541" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.17540984" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3295082" />
@@ -465,6 +461,11 @@
           <url>file://$PROJECT_DIR$/ExcelHandler.py</url>
           <line>42</line>
           <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/UserData.py</url>
+          <line>54</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -580,8 +581,87 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-374">
           <caret line="29" column="35" lean-forward="true" selection-start-line="29" selection-start-column="35" selection-end-line="29" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/address_provider.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/codecs.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="308" selection-start-line="308" selection-end-line="308" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/user_data.csv">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_sarmata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1343">
+          <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
           <folding>
-            <element signature="e#47#82#0" expanded="true" />
+            <element signature="e#47#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/projekt_2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#27#0" expanded="true" />
+            <marker date="1546954333524" expanded="true" signature="229:1941" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_dictation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
+          <folding>
+            <element signature="e#38#111#0" expanded="true" />
+            <marker date="1547056590127" expanded="true" signature="1807:2500" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run_trybun.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
+          <folding>
+            <element signature="e#39#90#0" expanded="true" />
+            <marker date="1547056422484" expanded="true" signature="178:179" ph="..." />
+            <marker date="1547056422484" expanded="true" signature="213:222" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/VoiceRecording.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+            <marker date="1547056652974" expanded="true" signature="62:63" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ExcelHandler.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+          <folding>
+            <element signature="e#0#34#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -597,111 +677,29 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ExcelHandler.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
-          <folding>
-            <element signature="e#0#34#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/address_provider.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="308" selection-start-line="308" selection-end-line="308" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/VoiceRecording.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="26" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-            <marker date="1547056652974" expanded="true" signature="62:63" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_trybun.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="23" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding>
-            <element signature="e#39#90#0" expanded="true" />
-            <marker date="1547056422484" expanded="true" signature="178:179" ph="..." />
-            <marker date="1547056422484" expanded="true" signature="213:222" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_sarmata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1092">
-          <caret line="85" column="38" selection-start-line="85" selection-start-column="38" selection-end-line="85" selection-end-column="38" />
-          <folding>
-            <element signature="e#47#147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projekt_2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="159">
-          <caret line="11" column="4" lean-forward="true" selection-start-line="11" selection-start-column="4" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#27#0" expanded="true" />
-            <marker date="1546954333524" expanded="true" signature="229:1941" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/run_dictation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-222">
-          <caret line="32" column="25" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="e#38#111#0" expanded="true" />
-            <marker date="1547056590127" expanded="true" signature="1807:2500" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/user_data.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/UserData.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="49" column="49" selection-start-line="49" selection-start-column="49" selection-end-line="49" selection-end-column="49" />
+        <state relative-caret-position="834">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
           <folding>
-            <marker date="1547057081439" expanded="true" signature="103:107" ph="..." />
-            <marker date="1547057081439" expanded="true" signature="155:160" ph="..." />
-            <marker date="1547057081439" expanded="true" signature="212:324" ph="..." />
-            <marker date="1547057081439" expanded="true" signature="695:696" ph="..." />
-            <marker date="1547057081439" expanded="true" signature="726:1476" ph="..." />
-            <marker date="1547057081439" expanded="true" signature="1600:1786" ph="..." />
+            <marker date="1547397154974" expanded="true" signature="103:107" ph="..." />
+            <marker date="1547397154974" expanded="true" signature="155:160" ph="..." />
+            <marker date="1547397154974" expanded="true" signature="220:361" ph="..." />
+            <marker date="1547397154974" expanded="true" signature="766:767" ph="..." />
+            <marker date="1547397154974" expanded="true" signature="797:1547" ph="..." />
+            <marker date="1547397154974" expanded="true" signature="1671:1865" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_menu.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        <state relative-caret-position="237">
+          <caret line="59" column="41" selection-start-line="59" selection-start-column="41" selection-end-line="59" selection-end-column="41" />
           <folding>
             <element signature="e#0#24#0" expanded="true" />
-            <marker date="1547057103683" expanded="true" signature="2130:2134" ph="..." />
-            <marker date="1547057103683" expanded="true" signature="2133:2134" ph="..." />
+            <marker date="1547397247921" expanded="true" signature="2258:2262" ph="..." />
+            <marker date="1547397247921" expanded="true" signature="2261:2262" ph="..." />
           </folding>
         </state>
       </provider>
