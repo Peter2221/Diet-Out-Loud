@@ -21,12 +21,13 @@ def main():
     dictation = Dictation()
     trybun.say_something("Witaj w Dajet. Aut. Laud.")
     usrData = UserData()
+    usrData.remove_data_from_file()
 
     while True:
         data, is_something = usrData.read_from_file()
 
         if is_something == True:
-            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BIJEMAJ. lub dzienne zapotrzebowanie. " % data['name'])
+            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. lub dzienne zapotrzebowanie. " % data['name'])
 
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
@@ -34,8 +35,10 @@ def main():
 
             if res_semantic_interpretation == '1':
                 trybun.say_something("Wybrałeś opcję. Liczenie Kalorii.")
+
             elif res_semantic_interpretation == '2':
                 trybun.say_something("Wybrałeś opcje. Liczenie beemi")
+
             elif res_semantic_interpretation == '3':
                 trybun.say_something("Wybrałeś opcję. Dzienne zapotrzebowanie")
             else:
