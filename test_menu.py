@@ -47,6 +47,9 @@ def main():
             trybun.say_something("Podaj swoje dane.")
             trybun.say_something("Jak masz na imię?.")
             name = dictation.dictation_recognize()
+            # płeć
+            trybun.say_something("Podaj płeć.")
+            gender = dictation.dictation_recognize()
             # age
             trybun.say_something("Ile masz lat (liczba)?")
             age = dictation.dictation_recognize()
@@ -57,7 +60,7 @@ def main():
             trybun.say_something("Ile masz wzrostu?")
             height = dictation.dictation_recognize()
             # setData
-            usrData.set_parameters(name, age, weight, height)
+            usrData.set_parameters(name, gender, age, weight, height)
             usrData.write_to_file()
 
 

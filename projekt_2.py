@@ -4,7 +4,7 @@ from morfeusz2_usage import Morfeusz2_usage
 from ExcelHandler import ExcelHandler, NoProductException
 from VoiceRecording import VoiceRecording
 import numpy as np
-import DietManager
+from DietManager import DietManager
 
 
 def main():
@@ -53,6 +53,7 @@ def main():
     exl.assign_sheets(wb)
 
     diet=DietManager()
+
 
     try:
         for word in other_words:

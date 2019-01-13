@@ -5,19 +5,20 @@ import csv
 
 class UserData:
     #def __init__(self, name, age, weight, height):
-    def set_parameters(self, name, age, weight, height):
+    def set_parameters(self, name, gender, age, weight, height):
         self.name = name
         self.age = age
         self.weight = weight
         self.height = height
+        self.gender = gender
 
     def write_to_file(self):
         with open('user_data.csv', mode='w', newline="") as csv_file:
-            fieldnames = ['name', 'age', 'weight', 'height']
+            fieldnames = ['name', 'gender', 'age', 'weight', 'height']
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
             writer.writeheader()
-            writer.writerow({'name': self.name, 'age': self.age, 'weight': self.weight, 'height' : self.height})
+            writer.writerow({'name': self.name, 'gender' : self.gender, 'age': self.age, 'weight': self.weight, 'height' : self.height})
 
     def read_from_file(self):
         with open('user_data.csv') as csv_file:
@@ -47,7 +48,7 @@ class UserData:
 
 def main():
     usrData = UserData()
-    usrData.set_parameters("Piotrek", 21, 82, 185)
+    usrData.set_parameters("Piotrek", "male", 21, 82, 185)
     usrData.write_to_file()
     #usrData.remove_data_from_file()
     b = usrData.read_from_file()
