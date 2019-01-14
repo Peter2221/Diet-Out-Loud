@@ -4,6 +4,7 @@
 import csv
 
 class UserData:
+
     #def __init__(self, name, age, weight, height):
     def set_parameters(self, name, gender, age, weight, height):
         self.name = name
@@ -33,17 +34,27 @@ class UserData:
                         header.append(piece_of_data)
                     line_count += 1
                 else:
-                    for num in range(0, len(header) - 1):
+                    for num in range(0, len(header)):
                         # podaje klucz oraz wartość
                         dict_of_data[header[num]] = row[num]
                     is_something = True
                     line_count += 1
+
             return dict_of_data, is_something
+
+    def set_params(self):
+        dict = self.read_from_file()
+        self.name = dict['name']
+        self.age = dict['age']
+        self.weight = dict['weight']
+        self.height = dict['height']
+        self.gender = dict['gender']
 
     def remove_data_from_file(self):
         f = open("user_data.csv", "w")
         f.truncate()
         f.close()
+
 
 
 def main():

@@ -1,0 +1,13 @@
+#ABNF 1.0;
+language pl-pl;
+mode voice;
+root $root;
+tag-format <semantics/1.0-literals>;
+
+$root = $jednosci | $nascie | $dziesiatki [$jednosci] | $setki [($dziesiatki |
+
+$jednosci = jeden | dwa | trzy | cztery | pięć | sześć | siedem | osiem | dziewięć;
+
+$nascie = dziesięć | jedenaście | dwanaście | trzynaście | czternaście | piętnaście | szesnaście | siedemnaście |osiemnaście | dziewiętnaście
+
+$dziesiatki = dwadzieścia | trzydzieści | czterdzieści | pięćdziesiąt | sześćdziesiąt | siedemdziesiąt | osiemdziesiąt | dziewięćdziesiąt

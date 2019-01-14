@@ -68,16 +68,20 @@ class DietManager:
         print("dzisiaj zjadłeś: " + str(self.eaten_today) + " kcal, zostało Ci: " + str(left) + " kcal")
 
 
-exl = ExcelHandler()
-wb = exl.open_workbook("products.xlsx")
-exl.assign_sheets(wb)
+def main():
+    exl = ExcelHandler()
+    wb = exl.open_workbook("products.xlsx")
+    exl.assign_sheets(wb)
 
-diet = DietManager()
-usrData = UserData()
-usrData.set_parameters("Piotrek", "male", 21, 82, 185)
-usrData.write_to_file()
+    diet = DietManager()
+    usrData = UserData()
+    usrData.set_parameters("Piotrek", "male", 21, 82, 185)
+    usrData.write_to_file()
 
-print(diet.calculate_bmi(usrData))
-print(diet.calculate_limit(usrData))
-diet.what_you_ate_today("banan", 300, exl, usrData)
+    print(diet.calculate_bmi(usrData))
+    print(diet.calculate_limit(usrData))
+    diet.what_you_ate_today("banan", 300, exl, usrData)
+
+if __name__ == "__main__":
+    main()
 

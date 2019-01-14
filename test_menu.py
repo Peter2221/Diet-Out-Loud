@@ -23,7 +23,7 @@ def main():
     dictation = Dictation()
     trybun.say_something("Witaj w Dajet. Aut. Laud.")
     usrData = UserData()
-    usrData.remove_data_from_file()
+    #usrData.remove_data_from_file()
     dm = DietManager()
     exl = ExcelHandler()
     wb = exl.open_workbook("products.xlsx")
@@ -31,10 +31,12 @@ def main():
 
     while True:
         data, is_something = usrData.read_from_file()
+        print(type(data))
 
         if is_something == True:
-            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. lub dzienne zapotrzebowanie. " % data['name'])
+            usrData.set_params()
 
+            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. lub dzienne zapotrzebowanie. " % data['name'])
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
             res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")

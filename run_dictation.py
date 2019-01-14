@@ -57,6 +57,7 @@ class Dictation:
             # jakbysmy potrzebowali wagi
             if word.isdigit() == True:
                 what_weight = int(word)
+                return what_weight
             else:
                 if word == "gram" or word == "gramów" or word == "gramy":
                     continue
@@ -64,8 +65,7 @@ class Dictation:
 
         product_inifinitive = morf.infinitive_of_word(other_words[0])
         print(product_inifinitive)
-
-        return product_inifinitive, what_weight
+        return product_inifinitive
 
 
 

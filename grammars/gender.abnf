@@ -1,0 +1,7 @@
+#ABNF 1.0;
+language pl-pl;
+mode voice;
+root $root;
+tag-format <semantics/1.0-literals>;
+
+$root = kobieta {1} | mężczyzna {2};
