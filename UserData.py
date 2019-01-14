@@ -4,7 +4,6 @@
 import csv
 
 class UserData:
-
     #def __init__(self, name, age, weight, height):
     def set_parameters(self, name, gender, age, weight, height):
         self.name = name
@@ -42,12 +41,11 @@ class UserData:
 
             return dict_of_data, is_something
 
-    def set_params(self):
-        dict = self.read_from_file()
+    def set_params_from_file(self, dict):
         self.name = dict['name']
-        self.age = dict['age']
-        self.weight = dict['weight']
-        self.height = dict['height']
+        self.age = int(dict['age'])
+        self.weight = int(dict['weight'])
+        self.height = int(dict['height'])
         self.gender = dict['gender']
 
     def remove_data_from_file(self):

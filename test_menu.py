@@ -34,17 +34,17 @@ def main():
         print(type(data))
 
         if is_something == True:
-            usrData.set_params()
+            usrData.set_params_from_file(data)
 
             trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. lub dzienne zapotrzebowanie. " % data['name'])
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
-            res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
+            # res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
+            res_semantic_interpretation = '2'
 
             if res_semantic_interpretation == '1':
                 trybun.say_something("Wybrałeś opcję. Liczenie Kalorii.")
-
-                #podawnie produktu
+                # podawanie produktu
                 trybun.say_something("podaj nazwę produktu")
                 produkt = dictation.dictation_recognize()
                 trybun.say_something("podaj wagę produktu")
@@ -86,7 +86,6 @@ def main():
             # setData
             usrData.set_parameters(name, gender, age, weight, height)
             usrData.write_to_file()
-
 
 
 if __name__ == "__main__":
