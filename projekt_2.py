@@ -4,6 +4,7 @@ from morfeusz2_usage import Morfeusz2_usage
 from ExcelHandler import ExcelHandler, NoProductException
 from VoiceRecording import VoiceRecording
 import numpy as np
+from DietManager import DietManager
 
 
 def main():
@@ -51,14 +52,18 @@ def main():
     wb = exl.open_workbook("products.xlsx")
     exl.assign_sheets(wb)
 
+    diet=DietManager()
+
+
     try:
         for word in other_words:
             product_inifinitive = morf.infinitive_of_word(word)
             print(product_inifinitive)
             # wypisuje co zjadłem + kalorie, podaje produkt + mase
-            exl.what_you_ate(product_inifinitive, what_weight)
+            diet.what_you_ate(product_inifinitive, what_weight, exl)
     except NoProductException as exception:
         print(exception.args[0])
+
 
 if __name__ == "__main__":
     main()

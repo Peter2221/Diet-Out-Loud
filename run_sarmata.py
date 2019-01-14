@@ -36,12 +36,11 @@ class SarmataArgs:
         self.address = ap.get("sarmata")
 
 class SarmataVoiceRecognition:
-    def menu_choice_recognition(self):
+    def menu_choice_recognition(self, grammar_file):
         vr = VoiceRecording()
         vr.record_voice()
 
         wave_file = "waves/output6.wav"
-        grammar_file = "grammars/menu.abnf"
         args = SarmataArgs(wave_file, grammar_file)
 
         settings = SarmataSettings()

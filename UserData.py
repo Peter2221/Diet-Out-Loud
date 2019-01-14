@@ -18,7 +18,7 @@ class UserData:
             writer = csv.DictWriter(csv_file, fieldnames=fieldnames)
 
             writer.writeheader()
-            writer.writerow({'name': self.name, 'gender' : self.gender, 'age': self.age, 'weight': self.weight, 'height' : self.height})
+            writer.writerow({'name': self.name, 'gender': self.gender, 'age': self.age, 'weight': self.weight, 'height': self.height})
 
     def read_from_file(self):
         with open('user_data.csv') as csv_file:
