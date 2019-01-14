@@ -4,4 +4,8 @@ mode voice;
 root $root;
 tag-format <semantics/1.0-literals>;
 
-$root = kobieta {1} | mężczyzna {2};
+$root = $kobieta {female} | $mężczyzna {male};
+
+$kobieta = kobieta | dziewczyna | dziewczynka | loszka | baba | babka | facetka;
+
+$mężczyzna = mężczyzna | chłopak | chłopczyk | chłopiec | facet | men;

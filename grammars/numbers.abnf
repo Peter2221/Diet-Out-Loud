@@ -4,7 +4,7 @@ mode voice;
 root $root;
 tag-format <semantics/1.0-literals>;
 
-$root = $jednosci | $nascie | $dziesiatki [$jednosci] | $setki [($dziesiatki |
+$root = $dziesiatki [$jednosci] | $nascie | $jednosci | $setki [ ($dziesiatki [$jednosci] | $nascie | $jednosci) ]
 
 $jednosci = jeden | dwa | trzy | cztery | pięć | sześć | siedem | osiem | dziewięć;
 
