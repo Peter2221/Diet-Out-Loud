@@ -1,4 +1,4 @@
-from ExcelHandler import ExcelHandler
+from ExcelHandler import ExcelHandler, NoProductException
 from UserData import UserData
 import datetime
 from pathlib import Path
@@ -33,13 +33,16 @@ class DietManager:
         return daily_need
 
     def what_you_ate(self, product, product_weight, excel_object):
-        found_cell = excel_object.find_product(product)
-        product = excel_object.produkty[found_cell]
-        kcal = excel_object.get_calories(found_cell)
-        kcal = int(product_weight/100 * kcal.value)
-        print("zjadłeś produkt: " + str(product.value) + " co daje: " + str(kcal) + " kcal")
-        self.date = datetime.datetime.now()
-        return kcal
+        try:
+            found_cell = excel_object.find_product(product)
+            product = excel_object.produkty[found_cell]
+            kcal = excel_object.get_calories(found_cell)
+            kcal = int(product_weight/100 * kcal.value)
+            print("zjadłeś produkt: " + str(product.value) + " co daje: " + str(kcal) + " kcal")
+            self.date = datetime.datetime.now()
+            return kcal
+        except NoProductException as exception:
+            print(exception.args[0])
 
     def is_it_the_next_day(self):
         date = datetime.datetime.now()
@@ -50,9 +53,9 @@ class DietManager:
         else:
             return True
 
-    def what_you_ate_today(self, product, product_weight, excel_object, user):
+    def what_you_ate_today(self, product, product_weight, excel_object, userData):
         eaten_now = self.what_you_ate(product, product_weight, excel_object)
-        limit = self.calculate_limit(user)
+        limit = self.calculate_limit(userData)
         if not self.is_it_the_next_day():
             self.eaten_today += eaten_now
         else:

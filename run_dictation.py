@@ -6,6 +6,7 @@ from dictation.service.streaming_recognizer import StreamingRecognizer
 from address_provider import AddressProvider
 from os.path import join as opjoin
 from VoiceRecording import VoiceRecording
+from morfeusz2_usage import Morfeusz2_usage
 
 class DictationArgs:
     address = None                      # IP address and port (address:port) of a service the client will connect to.
@@ -29,6 +30,7 @@ class DictationArgs:
 
 class Dictation:
     def dictation_recognize(self):
+        morf = Morfeusz2_usage()
         vr = VoiceRecording()
         vr.record_voice()
         args = DictationArgs("waves/output6.wav")
@@ -47,7 +49,25 @@ class Dictation:
         words = results[0]
         # print słowo ponade przez mówcę
         words = words['transcript']
-        return words
+        words = words.split()
+        other_words = []
+        what_weight = 0
+        # petla dla kazdego słowa
+        for word in words:
+            # jakbysmy potrzebowali wagi
+            if word.isdigit() == True:
+                what_weight = int(word)
+            else:
+                if word == "gram" or word == "gramów" or word == "gramy":
+                    continue
+                other_words.append(word)
+
+        product_inifinitive = morf.infinitive_of_word(other_words[0])
+        print(product_inifinitive)
+
+        return product_inifinitive, what_weight
+
+
 
 if __name__ == '__main__':
 
