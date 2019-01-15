@@ -17,13 +17,14 @@ Liczenie dziennego zapotrzebowania kalorycznego
 
 """
 
+
 def main():
     # Menu
     trybun = Trybun()
     dictation = Dictation()
     trybun.say_something("Witaj w Dajet. Aut. Laud.")
     usrData = UserData()
-    #usrData.remove_data_from_file()
+    # usrData.remove_data_from_file()
     dm = DietManager()
     exl = ExcelHandler()
     wb = exl.open_workbook("products.xlsx")
@@ -39,8 +40,8 @@ def main():
             trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. lub dzienne zapotrzebowanie. " % data['name'])
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
-            # res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
-            res_semantic_interpretation = '2'
+            res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
+            # res_semantic_interpretation = '2'
 
             if res_semantic_interpretation == '1':
                 trybun.say_something("Wybrałeś opcję. Liczenie Kalorii.")
@@ -49,7 +50,8 @@ def main():
                 produkt = dictation.dictation_recognize()
                 trybun.say_something("podaj wagę produktu")
                 waga = dictation.dictation_recognize()
-                dm.what_you_ate_today(produkt, waga, exl, usrData)
+                waga = int(waga)
+                dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
                 # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
 
             elif res_semantic_interpretation == '2':

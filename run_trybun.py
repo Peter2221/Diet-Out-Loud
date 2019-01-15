@@ -11,16 +11,15 @@ import time
 class Trybun:
     def say_something(self, text):
 
-        print(text)
-        # # Config:
-        # output_wave_file = 'tts_output.wav'
-        # ap = AddressProvider()
-        # address = ap.get("tribune")
-        # sampling_rate = 44100
-        # input_text = text
-        #
-        # call_synthesize(address, input_text, output_wave_file, sampling_rate)
-        # self.playWave()
+        # Config:
+        output_wave_file = 'tts_output.wav'
+        ap = AddressProvider()
+        address = ap.get("tribune")
+        sampling_rate = 44100
+        input_text = text
+
+        call_synthesize(address, input_text, output_wave_file, sampling_rate)
+        self.playWave()
 
     def playWave(self):
         # define stream chunk

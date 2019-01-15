@@ -4,13 +4,14 @@ import datetime
 from pathlib import Path
 from decimal import Decimal
 from run_trybun import *
+from FileManager import FileManager
 
 
 class DietManager:
 
     eaten_today = 0
-    date = datetime.datetime.now()
-
+    date = 0
+    fm = FileManager()
 
     def calculate_bmi(self, user):
         weight = user.weight
@@ -34,72 +35,51 @@ class DietManager:
         daily_need = int(daily_need)
         return daily_need
 
-    def delete_content(self, file):
-        with open(file, "w"):
-            pass
-
-    def get_date_from_file(self):
-        file = open('date.csv', 'r+')
-        last_date = file.read()
-        file.close()
-        return last_date
-
-    def add_to_eaten_today(self, eaten_now):
-        eaten_file = open("eaten.csv")
-        eaten_today = int(eaten_file.read())
-        eaten_today += eaten_now
-        self.delete_content(eaten_file)
-        eaten_file.write(str(eaten_today))
-        eaten_file.close()
-
-    def get_eaten_today(self):
-        eaten_file = open("eaten.csv")
-        eaten_today = int(eaten_file.read())
-        eaten_file.close()
-        return eaten_today
-
-    def what_you_ate(self, product, product_weight, excel_object):
+    def what_you_ate(self, product, product_weight, excel_object, trybun):
         try:
             found_cell = excel_object.find_product(product)
             product = excel_object.produkty[found_cell]
             kcal = excel_object.get_calories(found_cell)
             kcal = int(product_weight/100 * kcal.value)
-            print("zjadłeś produkt: " + str(product.value) + " co daje: " + str(kcal) + " kcal")
+            trybun.say_something("zjadłeś produkt: " + str(product.value) + " co daje: " + str(kcal) + " kilokalorii")
             return kcal
         except NoProductException as exception:
             print(exception.args[0])
 
     def is_it_the_next_day(self):
-        last_date = self.get_date_from_file()
+        last_date = self.fm.get_date_from_file()
         date = datetime.datetime.now().strftime("%Y-%m-%d")
         if date == last_date:
             return False
-        elif last_date is None: # ???? nie wiem czy teraz ma sens
+        elif last_date is None: # jeśli nie ma daty, wpisz dzisiejszą, czy to ma sens tutaj ? ---------- ???
+            self.fm.write_date_to_file(date)
             return False
         else:
             return True
 
     def what_you_ate_today(self, product, product_weight, excel_object, userData, tribune):
-        eaten_now = self.what_you_ate(product, product_weight, excel_object)
+        eaten_now = self.what_you_ate(product, product_weight, excel_object, tribune)
         limit = self.calculate_limit(userData)
+        next_day = self.is_it_the_next_day()
 
-        if not self.is_it_the_next_day():
-            self.add_to_eaten_today(eaten_now)
-            eaten_today = self.get_eaten_today()
-        else:
-            history_file = open("history.txt", "w+")
-            eaten_today = self.get_eaten_today()
-            date = self.get_date_from_file()
-            history_file.write(date + str(eaten_today) + " kcal")
-            self.delete_content("eaten_file.csv")
-            self.delete_content("date.csv")
+        self.fm.add_to_eaten_today(eaten_now)
+        eaten_today = self.fm.get_eaten_today()
 
-        left = limit-eaten_now
+        if next_day:
+            history_file = open("history.txt", "r+")
+            eaten_today = self.fm.get_eaten_today()
+            date = self.fm.get_date_from_file()
+            history_file.write(date + " " + str(eaten_today) + " kcal")
+            self.fm.clear_eaten_today()
+            new_date = datetime.datetime.now().strftime("%Y-%m-%d")
+            self.fm.write_date_to_file(new_date)
+
+        left = limit-eaten_today
         if left > 0:
-            tribune.say_something("dzisiaj zjadłeś: " + str(eaten_today) + " kcal, zostało Ci: " + str(left) + " kilokalorii")
+            tribune.say_something("dzisiaj zjadłeś: " + str(eaten_today) + " kilokalorii, zostało Ci: " + str(left) + " kilokalorii")
         else:
             left = left*(-1)
-            tribune.say_something("dzisiaj zjadłeś: " + str(eaten_today) + " kcal, to o " + str(left) + " kilokalorii za dużo! nie jedz już dzisiaj!")
+            tribune.say_something("dzisiaj zjadłeś: " + str(eaten_today) + " kilokalorii, to o " + str(left) + " kilokalorii za dużo! nie jedz już dzisiaj!")
 
 
 def main():
