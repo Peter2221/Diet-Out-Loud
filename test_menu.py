@@ -36,7 +36,7 @@ def main():
         if is_something == True:
             usrData.set_params_from_file(data)
 
-            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. lub dzienne zapotrzebowanie. " % data['name'])
+            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. dzienne zapotrzebowanie. lub wyjście z programu" % data['name'])
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
             res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
@@ -52,6 +52,7 @@ def main():
                 waga = int(waga)
                 dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
                 # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
+                trybun.say_something("")
 
             elif res_semantic_interpretation == '2':
                 trybun.say_something("Wybrałeś opcje. Liczenie beemi")
@@ -64,6 +65,9 @@ def main():
                 limit = dm.calculate_limit(usrData)
                 trybun.say_something("Twój dzienny limit kalorii wynosi %s" % limit)
                 continue
+            elif res_semantic_interpretation == '4':
+                trybun.say_something("Baj Baj %s bądź silny i napakowany forewer!" % data['name'])
+                break
 
             else:
                 trybun.say_something("Jesteś dzbanem")
