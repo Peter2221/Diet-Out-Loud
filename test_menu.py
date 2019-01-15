@@ -68,9 +68,8 @@ def main():
             elif res_semantic_interpretation == '4':
                 trybun.say_something("Baj Baj %s bądź silny i napakowany forewer!" % data['name'])
                 break
-
             else:
-                trybun.say_something("Jesteś dzbanem")
+                trybun.say_something("Endrju Ng, mistrz maszin lerningu byłby bardzo niezadowolony z twoich wyborów.")
                 continue
         else:
             trybun.say_something("Podaj swoje dane.")
