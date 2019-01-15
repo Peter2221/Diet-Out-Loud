@@ -1,0 +1,17 @@
+#ABNF 1.0;
+language pl-pl;
+mode voice;
+root $root;
+tag-format <semantics/1.0-literals>;
+
+$root = [$zyczenie] $czasownik [$przymiotnik] [$rzeczownik] {1} | [$zyczenie] $czasownik2 [$przyimek] [$rzeczownik2] [$przymiotnik2] {2};
+
+$zyczenie = chciałbym | chciałabym | chcę;
+$czasownik = dodać | dołożyć | obliczyć | policzyć;
+$przymiotnik = kolejny | następny | dodatkowy | drugi;
+$rzeczownik = produkt | kalorie;
+
+$czasownik2 = wrócić | powrócić | przejść;
+$przymiek = do;
+$rzeczownik2 = menu | meni | opcji;
+$przymiotnik2 = głownego | główne;

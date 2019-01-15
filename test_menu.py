@@ -44,15 +44,21 @@ def main():
 
             if res_semantic_interpretation == '1':
                 trybun.say_something("Wybrałeś opcję. Liczenie Kalorii.")
-                # podawanie produktu
-                trybun.say_something("podaj nazwę produktu")
-                produkt = dictation.dictation_recognize()
-                trybun.say_something("podaj wagę produktu")
-                waga = dictation.dictation_recognize()
-                waga = int(waga)
-                dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
-                # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
-                trybun.say_something("")
+                while True:
+                    # podawanie produktu
+                    trybun.say_something("podaj nazwę produktu")
+                    produkt = dictation.dictation_recognize()
+                    trybun.say_something("podaj wagę produktu")
+                    waga = dictation.dictation_recognize()
+                    waga = int(waga)
+                    dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
+                    # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
+                    trybun.say_something("Chcesz dodać kolejny produkt, czy wrócić do menu głownego?")
+                    res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/next_product.abnf")
+                    if res_semantic_interpretation == '1':
+                        continue
+                    else:
+                        break
 
             elif res_semantic_interpretation == '2':
                 trybun.say_something("Wybrałeś opcje. Liczenie beemi")
