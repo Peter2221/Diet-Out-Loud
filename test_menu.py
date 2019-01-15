@@ -32,7 +32,6 @@ def main():
 
     while True:
         data, is_something = usrData.read_from_file()
-        print(type(data))
 
         if is_something == True:
             usrData.set_params_from_file(data)
