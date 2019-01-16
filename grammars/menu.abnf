@@ -4,8 +4,7 @@ mode voice;
 root $root;
 tag-format <semantics/1.0-literals>;
 
-$root = [$zyczenie] [$czasownik] $rzeczownik1 {1} | [$zyczenie] [$czasownik] $rzeczownik2 {2} | [$zaimek3] [$zyczenie] [$czasownik] $rzeczownik3 {3} |
- [$zaimek4] [$przyslowek] [$kiedy] [$juz] czasownik4 {4}| [$zyczenie] $czasownik5 [$spójnik5] [$rzeczownik5] {5};
+$root = [$zyczenie] [$czasownik] $rzeczownik1 {1} | [$zyczenie] [$czasownik] $rzeczownik2 {2} | [$zaimek3] [$zyczenie] [$czasownik] $rzeczownik3 {3} | [$zaimek4] [$przyslowek] [$kiedy] [$juz] $czasownik4 {4} | [$zyczenie] $czasownik5 [$spójnik5] [$rzeczownik5] {5};
 
 $zyczenie = chciałbym | chciałabym | chcę;
 $czasownik = policzyć | obliczyć | liczenie;
@@ -18,7 +17,7 @@ $zaimek4 = ile | jak;
 $przysłowek = dużo;
 $kiedy = dzisiaj;
 $juz = już;
-#czasownik4 = zjadłem | skonsumowałem | spożyłem | jadłem;
+$czasownik4 = zjadłem | skonsumowałem | spożyłem | jadłem;
 
 $czasownik5 = wyjście | wyjść | wychodzić | egzit | opuścić;
 $rzeczownik5 = program | programu;

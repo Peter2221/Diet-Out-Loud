@@ -40,7 +40,7 @@ def main():
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
             res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
-            # res_semantic_interpretation = '2'
+            #res_semantic_interpretation = '5'
 
             if res_semantic_interpretation == '1':
                 trybun.say_something("Wybrałeś opcję. Liczenie Kalorii.")
@@ -75,7 +75,7 @@ def main():
 
             elif res_semantic_interpretation == '4':
                 trybun.say_something("Dzisiaj zjadłeś już.")
-                how_much = dm.()
+                how_much = 100
                 trybun.say_something("%s kalorii" % how_much)
                 continue
 
