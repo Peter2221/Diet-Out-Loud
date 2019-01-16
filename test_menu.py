@@ -48,7 +48,7 @@ def main():
                     # podawanie produktu
                     trybun.say_something("podaj nazwę produktu")
                     produkt = dictation.dictation_recognize()
-                    trybun.say_something("podaj wagę produktu")
+                    trybun.say_something("podaj wagę produktu w gramach")
                     waga = dictation.dictation_recognize()
                     waga = int(waga)
                     dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
@@ -57,6 +57,7 @@ def main():
                     res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/next_product.abnf")
                     if res_semantic_interpretation == '1':
                         continue
+                    # jak ktoś powie głupotę to i tak do menu przejdzie
                     else:
                         break
 
