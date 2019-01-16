@@ -69,7 +69,7 @@ class DietManager:
             history_file = open("history.txt", "a")
             eaten_yesterday = self.fm.get_eaten_today()
             date = self.fm.get_date_from_file()
-            history_file.write(date + " " + str(eaten_yesterday) + " kcal")
+            history_file.write('\n' + date + " " + str(eaten_yesterday) + " kcal")
             self.fm.clear_eaten_today()
             new_date = datetime.datetime.now().strftime("%Y-%m-%d")
             self.fm.write_date_to_file(new_date)
