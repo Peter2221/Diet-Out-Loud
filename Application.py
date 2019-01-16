@@ -53,7 +53,9 @@ def main():
                     res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/next_product.abnf")
                     if res_semantic_interpretation == '1':
                         continue
-                    # jak ktoś powie głupotę to i tak do menu przejdzie
+                    # jak ktoś powie głupotę to i tak do menu
+                    elif res_semantic_interpretation == '2':
+                        break
                     else:
                         break
 
