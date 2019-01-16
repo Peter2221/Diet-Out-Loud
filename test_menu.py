@@ -32,12 +32,11 @@ def main():
 
     while True:
         data, is_something = usrData.read_from_file()
-        print(type(data))
 
         if is_something == True:
             usrData.set_params_from_file(data)
 
-            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. lub dzienne zapotrzebowanie. " % data['name'])
+            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. dzienne zapotrzebowanie. lub wyjście z programu" % data['name'])
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
             res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
@@ -45,14 +44,21 @@ def main():
 
             if res_semantic_interpretation == '1':
                 trybun.say_something("Wybrałeś opcję. Liczenie Kalorii.")
-                # podawanie produktu
-                trybun.say_something("podaj nazwę produktu")
-                produkt = dictation.dictation_recognize()
-                trybun.say_something("podaj wagę produktu")
-                waga = dictation.dictation_recognize()
-                waga = int(waga)
-                dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
-                # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
+                while True:
+                    # podawanie produktu
+                    trybun.say_something("podaj nazwę produktu")
+                    produkt = dictation.dictation_recognize()
+                    trybun.say_something("podaj wagę produktu")
+                    waga = dictation.dictation_recognize()
+                    waga = int(waga)
+                    dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
+                    # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
+                    trybun.say_something("Chcesz dodać kolejny produkt, czy wrócić do menu głownego?")
+                    res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/next_product.abnf")
+                    if res_semantic_interpretation == '1':
+                        continue
+                    else:
+                        break
 
             elif res_semantic_interpretation == '2':
                 trybun.say_something("Wybrałeś opcje. Liczenie beemi")
@@ -65,9 +71,11 @@ def main():
                 limit = dm.calculate_limit(usrData)
                 trybun.say_something("Twój dzienny limit kalorii wynosi %s" % limit)
                 continue
-
+            elif res_semantic_interpretation == '4':
+                trybun.say_something("Baj Baj %s bądź silny i napakowany forewer!" % data['name'])
+                break
             else:
-                trybun.say_something("Jesteś dzbanem")
+                trybun.say_something("Endrju Ng, mistrz maszin lerningu byłby bardzo niezadowolony z twoich wyborów.")
                 continue
         else:
             trybun.say_something("Podaj swoje dane.")

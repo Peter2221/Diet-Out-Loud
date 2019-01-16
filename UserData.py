@@ -1,5 +1,5 @@
 """ klasa trzymająca dane użytkownika """
-""" imię, wiek, masa, wzrost """
+""" imię, wiek, masa, wzrost, płeć"""
 
 import csv
 
