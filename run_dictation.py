@@ -67,6 +67,44 @@ class Dictation:
         print(product_inifinitive)
         return product_inifinitive
 
+    def dictation_recognize_numbers(self):
+        morf = Morfeusz2_usage()
+        vr = VoiceRecording()
+        #vr.record_voice()
+        args = DictationArgs("waves/output6.wav")
+        args.mic = True
+
+        if args.wave is not None or args.mic:
+            with create_audio_stream(args) as stream:
+                settings = DictationSettings(args)
+                recognizer = StreamingRecognizer(args.address, settings)
+
+                print('Recognizing...')
+                results = recognizer.recognize(stream)
+                # printuje to co wykrył
+                print_results(results)
+
+        words = results[0]
+        # print słowo ponade przez mówcę
+        words = words['transcript']
+        words = words.split()
+        other_words = []
+        what_weight = 0
+        # petla dla kazdego słowa
+        for word in words:
+            # jakbysmy potrzebowali wagi
+            if word.isdigit() == True:
+                what_weight = int(word)
+                return what_weight
+            else:
+                if word == "gram" or word == "gramów" or word == "gramy":
+                    continue
+                other_words.append(word)
+
+        product_inifinitive = morf.infinitive_of_word(other_words[0])
+        print(product_inifinitive)
+        return product_inifinitive
+
 
 
 if __name__ == '__main__':

@@ -1,13 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-from sarmata.sarmata_client import validate_recognition_settings, create_audio_stream, print_results
+from sarmata.sarmata_client import validate_recognition_settings, create_audio_stream, print_results, print_results_numbers
 from sarmata.service.sarmata_settings import SarmataSettings
 from sarmata.service.sarmata_recognize import SarmataRecognizer
 from address_provider import AddressProvider
 from os.path import join as opjoin
 import sys
 from VoiceRecording import VoiceRecording
+from run_trybun import *
+from run_dictation import *
+
 
 
 class SarmataArgs:
@@ -84,6 +87,60 @@ class SarmataVoiceRecognition:
                 print(res_semantic_interpretation)
                 # zwraca interpretacje
                 return res_semantic_interpretation
+
+class SarmataVoiceRecognitionNumbers:
+    def menu_choice_recognition(self, grammar_file):
+        vr = VoiceRecording()
+        vr.record_voice()
+
+        wave_file = "waves/output6.wav"
+        args = SarmataArgs(wave_file, grammar_file)
+
+        settings = SarmataSettings()
+        settings.process_args(args)  # load settings from cmd
+        if args.grammar is not None:
+            settings.load_grammar(args.grammar)
+
+        can_define_grammar = False
+        if args.define_grammar:
+            if not settings.grammar_name:
+                print("Bad usage. Set BOTH grammar_name and grammar file when define grammar is set True.")
+                sys.exit(1)
+            can_define_grammar = True
+
+        recognizer = SarmataRecognizer(args.address)
+
+        if can_define_grammar:
+            define_grammar_response = recognizer.define_grammar(args.grammar_name, settings.grammar)
+            if define_grammar_response.ok:
+                if args.grammar is None:
+                    print("Grammar " + args.grammar_name + " removed")
+                else:
+                    print("Grammar " + args.grammar + " defined as " + args.grammar_name)
+            else:
+                print("Define grammar error: " + define_grammar_response.error)
+
+        # --------------------------
+        # recognize section
+        # --------------------------
+        if args.wave is not None or args.mic:
+            validate_recognition_settings(settings)
+
+            with create_audio_stream(args) as stream:
+                # generate id
+                session_id = stream.session_id()
+                settings.set_session_id(session_id)
+
+                results = recognizer.recognize(stream, settings)
+                rec_number_transcription = print_results_numbers(results, stream)
+                print(rec_number_transcription)
+
+                trybun = Trybun()
+                trybun.text_to_wave(rec_number_transcription + ". Liczba.")
+                dictation = Dictation()
+                recognized_number = dictation.dictation_recognize_numbers()
+                print(recognized_number)
+                return recognized_number
 
 
 if __name__ == '__main__':
