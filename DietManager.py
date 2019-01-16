@@ -7,6 +7,8 @@ from FileManager import FileManager
 class DietManager:
 
     fm = FileManager()
+    exl = ExcelHandler()
+    exl.set_all("products.xlsx")
 
     def calculate_bmi(self, user):
         weight = user.weight
@@ -30,7 +32,8 @@ class DietManager:
         daily_need = int(daily_need)
         return daily_need
 
-    def what_you_ate(self, product, product_weight, excel_object, trybun):
+    def what_you_ate(self, product, product_weight, trybun):
+        excel_object = self.exl
         try:
             found_cell = excel_object.find_product(product)
             product = excel_object.produkty[found_cell]
@@ -54,8 +57,8 @@ class DietManager:
         else:
             return True
 
-    def what_you_ate_today(self, product, product_weight, excel_object, userData, tribune):
-        eaten_now = self.what_you_ate(product, product_weight, excel_object, tribune)
+    def what_you_ate_today(self, product, product_weight, userData, tribune):
+        eaten_now = self.what_you_ate(product, product_weight, tribune)
         limit = self.calculate_limit(userData)
         next_day = self.is_it_the_next_day()
 
@@ -73,7 +76,7 @@ class DietManager:
             eaten_today = eaten_now
 
         left = limit-eaten_today
-        self.how_much_i_ate(left, tribune)
+        self.get_today(left, tribune)
         return left
 
     def get_today(self, left, tribune):

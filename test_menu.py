@@ -4,7 +4,6 @@ from run_sarmata import *
 from UserData import UserData
 from run_dictation import *
 from DietManager import DietManager
-from ExcelHandler import ExcelHandler
 
 """ Trybun pracuje na pliku .wav tts_output
 
@@ -26,9 +25,6 @@ def main():
     usrData = UserData()
     # usrData.remove_data_from_file()
     dm = DietManager()
-    exl = ExcelHandler()
-    wb = exl.open_workbook("products.xlsx")
-    exl.assign_sheets(wb)
 
     while True:
         data, is_something = usrData.read_from_file()
@@ -75,7 +71,7 @@ def main():
 
             elif res_semantic_interpretation == '4':
                 trybun.say_something("Dzisiaj zjadłeś już.")
-                how_much = dm.()
+                how_much = dm.get_today()
                 trybun.say_something("%s kalorii" % how_much)
                 continue
 
