@@ -39,8 +39,39 @@ def print_results(responses, stream):
             transcript = " ".join([word.transcript for word in res.words])
             #print("[{}.] {} /{}/ ({})".format(n, transcript, res.semantic_interpretation, res.confidence))
             return res.semantic_interpretation
-            break
-            n += 1
+            #break
+            #n += 1
+
+def print_results_numbers(responses, stream):
+    if responses is None:
+        print("Empty results - None object")
+        return
+
+    for response in responses:
+        if response is None:
+            print("Empty results - skipping response")
+            continue
+
+        print("Received response with status: {}".format(ResponseStatus.Name(response.status)))
+
+        if response.error:
+            print("[ERROR]: {}".format(response.error))
+
+        # single response expected
+        processing_completed = True
+        if response.status == START_OF_INPUT or response.status == EMPTY:
+            processing_completed = False
+
+        if processing_completed:
+            stream.close()
+
+        n = 1
+        for res in response.results:
+            transcript = " ".join([word.transcript for word in res.words])
+            #print("[{}.] {} /{}/ ({})".format(n, transcript, res.semantic_interpretation, res.confidence))
+            #print(transcript)
+            return transcript
+            #n += 1
 
 
 def validate_recognition_settings(settings):

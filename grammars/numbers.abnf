@@ -4,10 +4,12 @@ mode voice;
 root $root;
 tag-format <semantics/1.0-literals>;
 
-$root = $dziesiatki [$jednosci] | $nascie | $jednosci | $setki [ ($dziesiatki [$jednosci] | $nascie | $jednosci) ]
+$root = $dziesiatki [$jednosci] {d}| $nascie {n}| $jednosci {j}| $setki [ ($dziesiatki [$jednosci] | $nascie | $jednosci) ] {s};
 
 $jednosci = jeden | dwa | trzy | cztery | pięć | sześć | siedem | osiem | dziewięć;
 
-$nascie = dziesięć | jedenaście | dwanaście | trzynaście | czternaście | piętnaście | szesnaście | siedemnaście |osiemnaście | dziewiętnaście
+$nascie = dziesięć | jedenaście | dwanaście | trzynaście | czternaście | piętnaście | szesnaście | siedemnaście |osiemnaście | dziewiętnaście;
 
-$dziesiatki = dwadzieścia | trzydzieści | czterdzieści | pięćdziesiąt | sześćdziesiąt | siedemdziesiąt | osiemdziesiąt | dziewięćdziesiąt
+$dziesiatki = dwadzieścia | trzydzieści | czterdzieści | pięćdziesiąt | sześćdziesiąt | siedemdziesiąt | osiemdziesiąt | dziewięćdziesiąt;
+
+$setki = sto | dwieście | trzysta;

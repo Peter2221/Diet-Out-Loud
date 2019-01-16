@@ -82,21 +82,26 @@ def main():
                 trybun.say_something("Endrju Ng, mistrz maszin lerningu byłby bardzo niezadowolony z twoich wyborów.")
                 continue
         else:
+            sarmata_numbers = SarmataVoiceRecognitionNumbers()
+
             trybun.say_something("Podaj swoje dane.")
+
             trybun.say_something("Jak masz na imię?.")
             name = dictation.dictation_recognize()
-            # płeć TO DO sarmata ---------------------------------------------------------------
+
             trybun.say_something("Podaj płeć.")
-            gender = dictation.dictation_recognize()
-            # age SAJMATA --------------------------------------------------------------------
+            res_semantic_interpretation_gender = sarmata.menu_choice_recognition("grammars/gender.abnf")
+            gender = res_semantic_interpretation_gender
+
+
             trybun.say_something("Ile masz lat (liczba)?")
-            age = dictation.dictation_recognize()
-            # weight --------------------------------------------------------------------------
+            age = sarmata_numbers.menu_choice_recognition("grammars/numbers.abnf")
+
             trybun.say_something("Ile ważysz?")
-            weight = dictation.dictation_recognize()
-            # height SAJMATA -------------------------------------------------------------------------
+            weight = sarmata_numbers.menu_choice_recognition("grammars/numbers.abnf")
+
             trybun.say_something("Ile masz wzrostu?")
-            height = dictation.dictation_recognize()
+            height = sarmata_numbers.menu_choice_recognition("grammars/numbers.abnf")
             # setData
             usrData.set_parameters(name, gender, age, weight, height)
             usrData.write_to_file()
