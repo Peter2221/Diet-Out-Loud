@@ -36,7 +36,7 @@ def main():
         if is_something == True:
             usrData.set_params_from_file(data)
 
-            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. dzienne zapotrzebowanie. lub wyjście z programu" % data['name'])
+            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. dzienne zapotrzebowanie. ile już zjadłeś. lub wyjście z programu" % data['name'])
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
             res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
@@ -75,7 +75,7 @@ def main():
 
             elif res_semantic_interpretation == '4':
                 trybun.say_something("Dzisiaj zjadłeś już.")
-                how_much = 100
+                how_much = dm.get_today()
                 trybun.say_something("%s kalorii" % how_much)
                 continue
 
