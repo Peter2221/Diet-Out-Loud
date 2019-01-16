@@ -63,15 +63,21 @@ class DietManager:
         eaten_today = self.fm.get_eaten_today()
 
         if next_day:
-            history_file = open("history.txt", "r+")
-            eaten_today = self.fm.get_eaten_today()
+            history_file = open("history.txt", "a")
+            eaten_yesterday = self.fm.get_eaten_today()
             date = self.fm.get_date_from_file()
-            history_file.write(date + " " + str(eaten_today) + " kcal")
+            history_file.write(date + " " + str(eaten_yesterday) + " kcal")
             self.fm.clear_eaten_today()
             new_date = datetime.datetime.now().strftime("%Y-%m-%d")
             self.fm.write_date_to_file(new_date)
+            eaten_today = eaten_now
 
         left = limit-eaten_today
+        self.how_much_i_ate(left, tribune)
+        return left
+
+    def get_today(self, left, tribune):
+        eaten_today = self.fm.get_eaten_today()
         if left > 0:
             tribune.say_something("dzisiaj zjadłeś: " + str(eaten_today) + " kilokalorii, zostało Ci: " + str(left) + " kilokalorii")
         else:
