@@ -72,7 +72,14 @@ def main():
                 limit = dm.calculate_limit(usrData)
                 trybun.say_something("Twój dzienny limit kalorii wynosi %s" % limit)
                 continue
+
             elif res_semantic_interpretation == '4':
+                trybun.say_something("Dzisiaj zjadłeś już.")
+                how_much = dm.()
+                trybun.say_something("%s kalorii" % how_much)
+                continue
+
+            elif res_semantic_interpretation == '5':
                 trybun.say_something("Baj Baj %s bądź silny i napakowany forewer!" % data['name'])
                 break
             else:

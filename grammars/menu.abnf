@@ -4,7 +4,7 @@ mode voice;
 root $root;
 tag-format <semantics/1.0-literals>;
 
-$root = [$zyczenie] [$czasownik] $rzeczownik1 {1} | [$zyczenie] [$czasownik] $rzeczownik2 {2} | [$zaimek] [$zyczenie] [$czasownik] $rzeczownik3 {3} | [$zyczenie] $czasownik4 [$spójnik4] [$rzeczownik4] {4};
+$root = [$zyczenie] [$czasownik] $rzeczownik1 {1} | [$zyczenie] [$czasownik] $rzeczownik2 {2} | [$zaimek] [$zyczenie] [$czasownik] $rzeczownik3 {3} | [$zyczenie] $czasownik4 [$spójnik4] [$rzeczownik4] {5};
 
 $zyczenie = chciałbym | chciałabym | chcę;
 $czasownik = policzyć | obliczyć | liczenie;
