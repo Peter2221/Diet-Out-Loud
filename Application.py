@@ -32,11 +32,11 @@ def main():
         if is_something == True:
             usrData.set_params_from_file(data)
 
-            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. dzienne zapotrzebowanie. lub wyjście z programu" % data['name'])
+            trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. dzienne zapotrzebowanie. ile już zjadłeś. lub wyjście z programu" % data['name'])
             sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
             res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
-            # res_semantic_interpretation = '2'
+            #res_semantic_interpretation = '5'
 
             if res_semantic_interpretation == '1':
                 trybun.say_something("Wybrałeś opcję. Liczenie Kalorii.")
@@ -47,7 +47,7 @@ def main():
                     trybun.say_something("podaj wagę produktu w gramach")
                     waga = dictation.dictation_recognize()
                     waga = int(waga)
-                    dm.what_you_ate_today(produkt, waga, exl, usrData, trybun)
+                    dm.what_you_ate_today(produkt, waga, usrData, trybun)
                     # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
                     trybun.say_something("Chcesz dodać kolejny produkt, czy wrócić do menu głownego?")
                     res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/next_product.abnf")
@@ -70,9 +70,7 @@ def main():
                 continue
 
             elif res_semantic_interpretation == '4':
-                trybun.say_something("Dzisiaj zjadłeś już.")
-                how_much = dm.get_today()
-                trybun.say_something("%s kalorii" % how_much)
+                dm.get_today(trybun, usrData)
                 continue
 
             elif res_semantic_interpretation == '5':

@@ -79,8 +79,10 @@ class DietManager:
         self.get_today(left, tribune)
         return left
 
-    def get_today(self, left, tribune):
+    def get_today(self, tribune, user):
         eaten_today = self.fm.get_eaten_today()
+        limit = self.calculate_limit(user)
+        left = limit - eaten_today
         if left > 0:
             tribune.say_something("dzisiaj zjadłeś: " + str(eaten_today) + " kilokalorii, zostało Ci: " + str(left) + " kilokalorii")
         else:
