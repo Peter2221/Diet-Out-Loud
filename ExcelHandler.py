@@ -5,6 +5,7 @@ from xlsxwriter.utility import xl_rowcol_to_cell
 class ExcelHandler:
     produkty = []
     kalorie = []
+    typy = []
 
     def open_workbook(self, filename):
         wb = load_workbook(filename, data_only=True)  # wybieramy plik
@@ -13,6 +14,11 @@ class ExcelHandler:
     def assign_sheets(self, wb):
         self.produkty = wb["produkty"]  # wybieramy arkusz
         self.kalorie = wb["kalorie"]
+        self.typy = wb["rodzaj"]
+
+    def set_all(self, filename):
+        wb = self.open_workbook(filename)
+        self.assign_sheets(wb)
 
     def find_product(self, product):
 

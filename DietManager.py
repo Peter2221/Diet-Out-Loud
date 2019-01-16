@@ -1,16 +1,11 @@
 from ExcelHandler import ExcelHandler, NoProductException
 from UserData import UserData
 import datetime
-from pathlib import Path
-from decimal import Decimal
-from run_trybun import *
 from FileManager import FileManager
 
 
 class DietManager:
 
-    eaten_today = 0
-    date = 0
     fm = FileManager()
 
     def calculate_bmi(self, user):
@@ -27,7 +22,7 @@ class DietManager:
         age = user.age
         gender = user.gender
 
-        if gender == "kobieta":
+        if gender == "female":
             daily_need = 9.99*weight+6.25*height-4.92*age-161
         else:
             daily_need = 9.99*weight+6.25*height-4.92*age+5
