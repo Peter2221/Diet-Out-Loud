@@ -38,8 +38,6 @@ class FileManager:
         new_date = datetime.datetime.now().strftime("%Y-%m-%d")
         self.write_date_to_file(new_date, "date.txt")
 
-
-
 # fm = FileManager()
 # date = fm.get_date_from_file()
 # print(date)

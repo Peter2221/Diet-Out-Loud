@@ -5,7 +5,6 @@ from FileManager import FileManager
 
 
 class DietManager:
-
     fm = FileManager()
     exl = ExcelHandler()
     exl.set_all("products.xlsx")
@@ -71,7 +70,10 @@ class DietManager:
                 eaten_today = eaten_now
                 self.fm.add_to_eaten_today(eaten_today)
 
-            left = limit-eaten_today
+            else:
+                self.fm.add_to_eaten_today(eaten_now)
+
+            left = limit - eaten_today
             self.get_today(tribune, userData)
             return left
 

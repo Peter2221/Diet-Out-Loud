@@ -112,6 +112,5 @@ def main():
             usrData.set_parameters(name, gender, age, weight, height)
             usrData.write_to_file()
 
-
 if __name__ == "__main__":
     main()
