@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # coding=utf-8
-from dictation.dictation_client import create_audio_stream, print_results
+from dictation.dictation_client import create_audio_stream, print_results2
 from dictation.service.dictation_settings import DictationSettings
 from dictation.service.streaming_recognizer import StreamingRecognizer
 from address_provider import AddressProvider
@@ -44,7 +44,7 @@ class Dictation:
                 print('Recognizing...')
                 results = recognizer.recognize(stream)
                 # printuje to co wykrył
-                print_results(results)
+                print_results2(results)
 
         words = results[0]
         # print słowo ponade przez mówcę
@@ -59,7 +59,7 @@ class Dictation:
                 what_weight = int(word)
                 return what_weight
             else:
-                if word == "gram" or word == "gramów" or word == "gramy":
+                if word == "gram" or word == "gramów" or word == "gramy" or word == "groszy":
                     continue
                 other_words.append(word)
 
@@ -82,7 +82,7 @@ class Dictation:
                 print('Recognizing...')
                 results = recognizer.recognize(stream)
                 # printuje to co wykrył
-                print_results(results)
+                print_results2(results)
 
         words = results[0]
         # print słowo ponade przez mówcę
@@ -119,4 +119,4 @@ if __name__ == '__main__':
 
             print('Recognizing...')
             results = recognizer.recognize(stream)
-            print_results(results)
+            print_results2(results)
