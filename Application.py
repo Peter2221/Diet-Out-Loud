@@ -47,7 +47,10 @@ def main():
                     trybun.say_something("podaj wagę produktu w gramach")
                     waga = dictation.dictation_recognize()
                     waga = int(waga)
-                    dm.what_you_ate_today(produkt, waga, usrData, trybun)
+                    error_result = dm.what_you_ate_today(produkt, waga, usrData, trybun)
+                    if error_result == -1:
+                        trybun.say_something("Spróbuj jeszcze raz.")
+                        continue
                     # dodawanie kolejnego produktu albo wracanie, na tak lub nie ----------------------
                     trybun.say_something("Chcesz dodać kolejny produkt, czy wrócić do menu głownego?")
                     res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/next_product.abnf")

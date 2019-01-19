@@ -44,6 +44,7 @@ class DietManager:
         except NoProductException as exception:
             print(exception.args[0])
             trybun.say_something(exception.args[0])
+            return -1
 
     def is_it_the_next_day(self):
         last_date = self.fm.get_date_from_file()
@@ -61,22 +62,27 @@ class DietManager:
         limit = self.calculate_limit(userData)
         next_day = self.is_it_the_next_day()
 
-        self.fm.add_to_eaten_today(eaten_now)
-        eaten_today = self.fm.get_eaten_today()
+        # Wystąpił błąd!
+        if eaten_now == -1:
+            return -1
 
-        if next_day:
-            history_file = open("history.txt", "a")
-            eaten_yesterday = self.fm.get_eaten_today()
-            date = self.fm.get_date_from_file()
-            history_file.write(date + " " + str(eaten_yesterday) + " kcal")
-            self.fm.clear_eaten_today()
-            new_date = datetime.datetime.now().strftime("%Y-%m-%d")
-            self.fm.write_date_to_file(new_date)
-            eaten_today = eaten_now
+        else:
+            self.fm.add_to_eaten_today(eaten_now)
+            eaten_today = self.fm.get_eaten_today()
 
-        left = limit-eaten_today
-        self.get_today(left, tribune)
-        return left
+            if next_day:
+                history_file = open("history.txt", "a")
+                eaten_yesterday = self.fm.get_eaten_today()
+                date = self.fm.get_date_from_file()
+                history_file.write(date + " " + str(eaten_yesterday) + " kcal")
+                self.fm.clear_eaten_today()
+                new_date = datetime.datetime.now().strftime("%Y-%m-%d")
+                self.fm.write_date_to_file(new_date)
+                eaten_today = eaten_now
+
+            left = limit-eaten_today
+            self.get_today(left, tribune)
+            return left
 
     def get_today(self, tribune, user):
         eaten_today = self.fm.get_eaten_today()
