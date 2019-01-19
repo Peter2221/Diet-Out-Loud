@@ -81,7 +81,7 @@ class DietManager:
                 eaten_today = eaten_now
 
             left = limit-eaten_today
-            self.get_today(left, tribune)
+            self.get_today(tribune, userData)
             return left
 
     def get_today(self, tribune, user):

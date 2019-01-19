@@ -45,7 +45,7 @@ def main():
                     trybun.say_something("podaj nazwę produktu")
                     produkt = dictation.dictation_recognize()
                     trybun.say_something("podaj wagę produktu w gramach")
-                    waga = dictation.dictation_recognize()
+                    waga = dictation.dictation_recognize_numbers()
                     waga = int(waga)
                     error_result = dm.what_you_ate_today(produkt, waga, usrData, trybun)
                     if error_result == -1:
