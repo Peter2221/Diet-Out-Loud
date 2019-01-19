@@ -17,7 +17,6 @@ Liczenie dziennego zapotrzebowania kalorycznego
 
 """
 
-
 def main():
     # Menu
     trybun = Trybun()
