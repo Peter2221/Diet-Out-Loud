@@ -7,10 +7,8 @@ import pyaudio
 import wave
 import time
 
-
 class Trybun:
     def say_something(self, text):
-
         # Config:
         output_wave_file = 'tts_output.wav'
         ap = AddressProvider()
@@ -48,3 +46,13 @@ class Trybun:
 
         # close PyAudio
         p.terminate()
+
+    def text_to_wave(self, text):
+        # Config:
+        output_wave_file = "waves\output6."
+        ap = AddressProvider()
+        address = ap.get("tribune")
+        sampling_rate = 44100
+        input_text = text
+
+        call_synthesize(address, input_text, output_wave_file, sampling_rate)

@@ -59,7 +59,7 @@ class Dictation:
                 what_weight = int(word)
                 return what_weight
             else:
-                if word == "gram" or word == "gramów" or word == "gramy":
+                if word == "gram" or word == "gramów" or word == "gramy" or word == "groszy":
                     continue
                 other_words.append(word)
 

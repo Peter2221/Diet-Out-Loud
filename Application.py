@@ -23,8 +23,9 @@ def main():
     dictation = Dictation()
     trybun.say_something("Witaj w Dajet. Aut. Laud.")
     usrData = UserData()
-    # usrData.remove_data_from_file()
+    #usrData.remove_data_from_file()
     dm = DietManager()
+    sarmata = SarmataVoiceRecognition()
 
     while True:
         data, is_something = usrData.read_from_file()
@@ -33,7 +34,6 @@ def main():
             usrData.set_params_from_file(data)
 
             trybun.say_something("Witaj, %s. wybierz jedną z opcji. liczenie kalorii. liczenie BEEMI. dzienne zapotrzebowanie. ile już zjadłeś. lub wyjście z programu" % data['name'])
-            sarmata = SarmataVoiceRecognition()
             # 1, 2 lub 3
             res_semantic_interpretation = sarmata.menu_choice_recognition("grammars/menu.abnf")
             #res_semantic_interpretation = '5'
@@ -92,7 +92,6 @@ def main():
             trybun.say_something("Podaj płeć.")
             res_semantic_interpretation_gender = sarmata.menu_choice_recognition("grammars/gender.abnf")
             gender = res_semantic_interpretation_gender
-
 
             trybun.say_something("Ile masz lat (liczba)?")
             age = sarmata_numbers.menu_choice_recognition("grammars/numbers.abnf")

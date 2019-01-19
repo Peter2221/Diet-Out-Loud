@@ -44,7 +44,6 @@ class DietManager:
         except NoProductException as exception:
             print(exception.args[0])
             trybun.say_something(exception.args[0])
-            return 0
 
     def is_it_the_next_day(self):
         last_date = self.fm.get_date_from_file()
