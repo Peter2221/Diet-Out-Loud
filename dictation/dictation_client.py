@@ -7,7 +7,7 @@ from service.streaming_recognizer import StreamingRecognizer
 from DICTATION_CLIENT_VERSION import DICTATION_CLIENT_VERSION
 
 
-def print_results(results):
+def print_results2(results):
     for res in results:
         print("{}".format(res['transcript']))
         words = res['transcript'].split()
@@ -74,4 +74,4 @@ if __name__ == '__main__':
 
             print('Recognizing...')
             results = recognizer.recognize(stream)
-            print_results(results)
+            print_results2(results)

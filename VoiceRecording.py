@@ -20,11 +20,6 @@ class VoiceRecording:
         stream = p.open(format=FORMAT, channels=CHANNELS, rate=RATE, input=True, frames_per_buffer=CHUNK)
 
         # odlicza do nagrywania
-        print("nagrywanie za 3")
-        time.sleep(1)
-        print("2")
-        time.sleep(1)
-        print("1")
         time.sleep(1)
         print("*** nagrywanie... ***")
 
