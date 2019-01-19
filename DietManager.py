@@ -5,7 +5,6 @@ from FileManager import FileManager
 
 
 class DietManager:
-
     fm = FileManager()
     exl = ExcelHandler()
     exl.set_all("products.xlsx")
@@ -47,12 +46,9 @@ class DietManager:
             return -1
 
     def is_it_the_next_day(self):
-        last_date = self.fm.get_date_from_file()
-        date = datetime.datetime.now().strftime("%Y-%m-%d")
-        if date == last_date:
-            return False
-        elif last_date is None: # jeśli nie ma daty, wpisz dzisiejszą, czy to ma sens tutaj ? ---------- ???
-            self.fm.write_date_to_file(date)
+        last_date = self.fm.get_date_from_file("date.txt")
+        open_date = self.fm.get_date_from_file("open_date.txt")
+        if open_date == last_date:
             return False
         else:
             return True
@@ -67,20 +63,14 @@ class DietManager:
             return -1
 
         else:
-            self.fm.add_to_eaten_today(eaten_now)
             eaten_today = self.fm.get_eaten_today()
 
             if next_day:
-                history_file = open("history.txt", "a")
-                eaten_yesterday = self.fm.get_eaten_today()
-                date = self.fm.get_date_from_file()
-                history_file.write(date + " " + str(eaten_yesterday) + " kcal")
-                self.fm.clear_eaten_today()
-                new_date = datetime.datetime.now().strftime("%Y-%m-%d")
-                self.fm.write_date_to_file(new_date)
+                self.fm.write_yesterday_to_history()
                 eaten_today = eaten_now
+                self.fm.add_to_eaten_today(eaten_today)
 
-            left = limit-eaten_today
+            left = limit - eaten_today
             self.get_today(tribune, userData)
             return left
 

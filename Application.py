@@ -4,6 +4,7 @@ from run_sarmata import *
 from UserData import UserData
 from run_dictation import *
 from DietManager import DietManager
+import datetime
 
 """ Trybun pracuje na pliku .wav tts_output
 
@@ -26,6 +27,8 @@ def main():
     #usrData.remove_data_from_file()
     dm = DietManager()
     sarmata = SarmataVoiceRecognition()
+    open_date = datetime.datetime.now().strftime("%Y-%m-%d")
+    dm.fm.write_date_to_file(open_date, "open_date.txt")
 
     while True:
         data, is_something = usrData.read_from_file()
@@ -107,7 +110,6 @@ def main():
             # setData
             usrData.set_parameters(name, gender, age, weight, height)
             usrData.write_to_file()
-
 
 if __name__ == "__main__":
     main()
