@@ -47,12 +47,9 @@ class DietManager:
             return -1
 
     def is_it_the_next_day(self):
-        last_date = self.fm.get_date_from_file()
-        date = datetime.datetime.now().strftime("%Y-%m-%d")
-        if date == last_date:
-            return False
-        elif last_date is None: # jeśli nie ma daty, wpisz dzisiejszą, czy to ma sens tutaj ? ---------- ???
-            self.fm.write_date_to_file(date)
+        last_date = self.fm.get_date_from_file("date.txt")
+        open_date = self.fm.get_date_from_file("open_date.txt")
+        if open_date == last_date:
             return False
         else:
             return True
@@ -66,39 +63,17 @@ class DietManager:
         if eaten_now == -1:
             return -1
 
-<<<<<<< HEAD
-        if next_day:
-            history_file = open("history.txt", "a")
-            eaten_yesterday = self.fm.get_eaten_today()
-            date = self.fm.get_date_from_file()
-            history_file.write('\n' + date + " " + str(eaten_yesterday) + " kcal")
-            self.fm.clear_eaten_today()
-            new_date = datetime.datetime.now().strftime("%Y-%m-%d")
-            self.fm.write_date_to_file(new_date)
-            eaten_today = eaten_now
-
-        left = limit-eaten_today
-        self.get_today(left, tribune)
-        return left
-=======
         else:
-            self.fm.add_to_eaten_today(eaten_now)
             eaten_today = self.fm.get_eaten_today()
 
             if next_day:
-                history_file = open("history.txt", "a")
-                eaten_yesterday = self.fm.get_eaten_today()
-                date = self.fm.get_date_from_file()
-                history_file.write(date + " " + str(eaten_yesterday) + " kcal")
-                self.fm.clear_eaten_today()
-                new_date = datetime.datetime.now().strftime("%Y-%m-%d")
-                self.fm.write_date_to_file(new_date)
+                self.fm.write_yesterday_to_history()
                 eaten_today = eaten_now
+                self.fm.add_to_eaten_today(eaten_today)
 
             left = limit-eaten_today
             self.get_today(left, tribune)
             return left
->>>>>>> 8b445ac77e2ac1de31f0aca08054ca1db40d7175
 
     def get_today(self, tribune, user):
         eaten_today = self.fm.get_eaten_today()
@@ -109,6 +84,7 @@ class DietManager:
         else:
             left = left*(-1)
             tribune.say_something("dzisiaj zjadłeś: " + str(eaten_today) + " kilokalorii, to o " + str(left) + " kilokalorii za dużo! nie jedz już dzisiaj!")
+
 
 
 def main():
