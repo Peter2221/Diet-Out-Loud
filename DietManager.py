@@ -72,7 +72,7 @@ class DietManager:
                 self.fm.add_to_eaten_today(eaten_today)
 
             left = limit-eaten_today
-            self.get_today(left, tribune)
+            self.get_today(tribune, userData)
             return left
 
     def get_today(self, tribune, user):
