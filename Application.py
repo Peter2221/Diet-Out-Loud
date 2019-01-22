@@ -6,15 +6,7 @@ from run_dictation import *
 from DietManager import DietManager
 import datetime
 
-""" Trybun pracuje na pliku .wav tts_output
-
-TODO: zapis informacji o użytkowniku, jeśli jest 1 raz -> waga, wzrost, wiek -> sarmata
-Obsługa błędów, jeśli ktoś powie jakąś głupotę
-Wczytywanie danych z pliku, po ponownym otwarciu programu.
-
-Liczenie BMI
-Liczenie dziennego zapotrzebowania kalorycznego
-
+""" 
 """
 
 def main():
