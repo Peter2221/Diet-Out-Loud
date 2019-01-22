@@ -46,25 +46,30 @@ class Dictation:
                 # printuje to co wykrył
                 print_results2(results)
 
-        words = results[0]
-        # print słowo ponade przez mówcę
-        words = words['transcript']
-        words = words.split()
-        other_words = []
-        # petla dla kazdego słowa
-        for word in words:
-            if word == "gram" or word == "gramów" or word == "gramy" or word == "groszy":
-                continue
-            other_words.append(word)
+        try:
+            words = results[0]
+            # print słowo ponade przez mówcę
+            words = words['transcript']
+            if words == "":
+                raise Exception
+            words = words.split()
+            other_words = []
+            # petla dla kazdego słowa
+            for word in words:
+                if word == "gram" or word == "gramów" or word == "gramy" or word == "groszy":
+                    continue
+                other_words.append(word)
 
-        product_inifinitive = morf.infinitive_of_word(other_words[0])
-        print(product_inifinitive)
-        return product_inifinitive
+            product_inifinitive = morf.infinitive_of_word(other_words[0])
+            print(product_inifinitive)
+            return product_inifinitive
+        except Exception:
+            return -1
 
     def dictation_recognize_numbers(self):
         morf = Morfeusz2_usage()
         vr = VoiceRecording()
-        vr.record_voice()
+        #vr.record_voice()
         args = DictationArgs("waves/output6.wav")
         args.mic = True
 

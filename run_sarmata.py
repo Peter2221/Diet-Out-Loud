@@ -76,17 +76,25 @@ class SarmataVoiceRecognition:
         if args.wave is not None or args.mic:
             validate_recognition_settings(settings)
 
-            with create_audio_stream(args) as stream:
-                # generate id
-                session_id = stream.session_id()
-                settings.set_session_id(session_id)
+            try:
+                with create_audio_stream(args) as stream:
+                    # generate id
+                    session_id = stream.session_id()
+                    settings.set_session_id(session_id)
 
-                results = recognizer.recognize(stream, settings)
-                res_semantic_interpretation = print_results(results, stream)
+                    results = recognizer.recognize(stream, settings)
+                    res_semantic_interpretation = print_results(results, stream)
 
-                print(res_semantic_interpretation)
-                # zwraca interpretacje
-                return res_semantic_interpretation
+                    if res_semantic_interpretation == None:
+                        raise Exception
+
+                    else:
+                        print(res_semantic_interpretation)
+                        # zwraca interpretacje
+                        return res_semantic_interpretation
+            except Exception:
+                print("Bład")
+                return -1
 
 class SarmataVoiceRecognitionNumbers:
     def menu_choice_recognition(self, grammar_file):
@@ -126,21 +134,26 @@ class SarmataVoiceRecognitionNumbers:
         if args.wave is not None or args.mic:
             validate_recognition_settings(settings)
 
-            with create_audio_stream(args) as stream:
-                # generate id
-                session_id = stream.session_id()
-                settings.set_session_id(session_id)
+            try:
+                with create_audio_stream(args) as stream:
+                    # generate id
+                    session_id = stream.session_id()
+                    settings.set_session_id(session_id)
 
-                results = recognizer.recognize(stream, settings)
-                rec_number_transcription = print_results_numbers(results, stream)
-                print(rec_number_transcription)
-
-                trybun = Trybun()
-                trybun.text_to_wave(rec_number_transcription + ". Liczba.")
-                dictation = Dictation()
-                recognized_number = dictation.dictation_recognize_numbers()
-                print(recognized_number)
-                return recognized_number
+                    results = recognizer.recognize(stream, settings)
+                    rec_number_transcription = print_results_numbers(results, stream)
+                    if rec_number_transcription == None:
+                        raise Exception
+                    else:
+                        print(rec_number_transcription)
+                        trybun = Trybun()
+                        trybun.text_to_wave(rec_number_transcription + ". Liczba.")
+                        dictation = Dictation()
+                        recognized_number = dictation.dictation_recognize_numbers()
+                        print(recognized_number)
+                        return recognized_number
+            except Exception:
+                return -1
 
 
 if __name__ == '__main__':

@@ -7,7 +7,7 @@ tag-format <semantics/1.0-literals>;
 $root = [$zyczenie] [$czasownik] $rzeczownik1 {1} | [$zyczenie] [$czasownik] $rzeczownik2 {2} | [$zaimek3] [$zyczenie] [$czasownik] $rzeczownik3 {3} | [$zaimek4] [$przyslowek] [$kiedy] [$juz] $czasownik4 {4} | [$zyczenie] $czasownik5 [$spójnik5] [$rzeczownik5] {5};
 
 $zyczenie = chciałbym | chciałabym | chcę;
-$czasownik = policzyć | obliczyć | liczenie;
+$czasownik = policzyć | obliczyć | liczenie | oblicz;
 
 $rzeczownik1 = kalorii | kalorie;
 $rzeczownik2 = bmi | beemi | bijemaj;
@@ -17,9 +17,9 @@ $zaimek4 = ile | jak;
 $przysłowek = dużo;
 $kiedy = dzisiaj;
 $juz = już;
-$czasownik4 = zjadłem | skonsumowałem | spożyłem | jadłem;
+$czasownik4 = zjadłem | zjadłam | skonsumowałem | spożyłem | spożyłam | jadłem | jadłam;
 
-$czasownik5 = wyjście | wyjść | wychodzić | egzit | opuścić;
+$czasownik5 = wyjście | wyjść | wychodzić | egzit | opuścić | wyjdź;
 $rzeczownik5 = program | programu;
 $spójnik5 = z;
 

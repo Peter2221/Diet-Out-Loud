@@ -33,8 +33,8 @@ class FileManager:
         history_file = open("history.txt", "a")
         eaten_yesterday = self.get_eaten_today()
         date = self.get_date_from_file("date.txt")
-        history_file.write('\n' + date + " " + str(eaten_yesterday) + " kcal")  # tutaj wpisze się do historii
-        self.clear_eaten_today()  # tu wyzeruje plik z kaloriami z dzisiaj
+        history_file.write('\n' + date + " " + str(eaten_yesterday) + " kcal") # tutaj wpisze się do historii
+        self.clear_eaten_today() # tu wyzeruje plik z kaloriami z dzisiaj
         new_date = datetime.datetime.now().strftime("%Y-%m-%d")
         self.write_date_to_file(new_date, "date.txt")
 
